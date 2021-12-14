@@ -8,14 +8,23 @@ Fairlearn es un paquete de Python que permite a los desarrolladores de sistemas 
 Sitio web: https://fairlearn.org/
 
 [Lanzamiento actual](https://github.com/lgfunderburk/Fairlearn-es#lanzamiento-actual)
+
 [Lo que queremos decir con * equidad * ](https://github.com/lgfunderburk/Fairlearn-es#qu%C3%A9-entendemos-por-equidad)
+
 [Descripción general de Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#descripci%C3%B3n-general-de-fairlearn)
+
 [Métricas de Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#m%C3%A9tricas-de-fairlearn)
+
 [Algoritmos Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#algoritmos-fairlearn)
+
 [Instalar Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#instalar-fairlearn)
+
 [Uso](https://github.com/lgfunderburk/Fairlearn-es#uso)
+
 [Contribuir a Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#contribuir-a-fairlearn)
+
 [Mantenedores](https://github.com/lgfunderburk/Fairlearn-es#mantenedores-de-fairlearn)
+
 [Propuestas en GitHub](https://github.com/lgfunderburk/Fairlearn-es#propuestas-en-github)
 
 ## Lanzamiento actual
