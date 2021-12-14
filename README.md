@@ -29,7 +29,6 @@ Sitio web: https://fairlearn.org/
 Un sistema de inteligencia artificial puede comportarse de manera injusta por diversas razones. En Fairlearn, definimos si un sistema de IA se comporta de manera injusta en términos de su impacto en las personas, es decir, en términos de daños. Nos centramos en dos tipos de daños:
 
 * *Daños por asignación*. Estos daños pueden ocurrir cuando los sistemas de inteligencia artificial amplían o retienen oportunidades, recursos o información. Algunas de las aplicaciones clave se encuentran en la contratación, las admisiones escolares y los préstamos.
-
 * *Daños a la calidad del servicio*. La calidad del servicio se refiere a si un sistema funciona tan bien para una persona como para otra, incluso si no se brindan o retienen oportunidades, recursos o información.
 
 Seguimos el enfoque conocido como **equidad grupal**, que pregunta: *¿Qué grupos de personas corren el riesgo de sufrir daños?* Los grupos relevantes deben ser especificados por el científico de datos y son específicos de la aplicación.
