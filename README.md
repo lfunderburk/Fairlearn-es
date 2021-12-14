@@ -32,7 +32,7 @@ Un sistema de inteligencia artificial puede comportarse de manera injusta por di
 * *Daños por asignación*. Estos daños pueden ocurrir cuando los sistemas de inteligencia artificial amplían o retienen oportunidades, recursos o información. Algunas de las aplicaciones clave se encuentran en la contratación, las admisiones escolares y los préstamos.
 
 * *Daños a la calidad del servicio*. La calidad del servicio se refiere a si un sistema funciona tan bien para una persona como para otra, incluso si no se brindan o retienen oportunidades, recursos o información.
-* 
+
 Seguimos el enfoque conocido como **equidad grupal**, que pregunta: *¿Qué grupos de personas corren el riesgo de sufrir daños?* Los grupos relevantes deben ser especificados por el científico de datos y son específicos de la aplicación.
 
 La equidad grupal se formaliza mediante un conjunto de restricciones, que requieren que algunos aspectos (o aspectos) del comportamiento del sistema de IA sean comparables entre los grupos. El paquete Fairlearn permite la evaluación y mitigación de la injusticia bajo varias definiciones comunes. Para obtener más información sobre nuestras definiciones de equidad, visite nuestra [guía del usuario sobre Equidad de los sistemas de inteligencia artificial](https://fairlearn.org/main/user_guide/fairness_in_machine_learning.html#fairness-of-ai-systems).
@@ -43,34 +43,49 @@ La equidad grupal se formaliza mediante un conjunto de restricciones, que requie
 
 El paquete Fairlearn Python tiene dos componentes:
 
-Métricas para evaluar qué grupos se ven afectados negativamente por un modelo y para comparar varios modelos en términos de diversas métricas de equidad y precisión.
-Algoritmos para mitigar la injusticia en una variedad de tareas de IA y en una variedad de definiciones de equidad.
-Métricas de Fairlearn
-Consulte nuestra guía detallada sobre las métricas de Fairlearn.
+* *Métricas* para evaluar qué grupos se ven afectados negativamente por un modelo y para comparar varios modelos en términos de diversas métricas de equidad y precisión.
 
-Algoritmos Fairlearn
-Para obtener una descripción general de nuestros algoritmos, consulte nuestro sitio web.
+* *Algoritmos* para mitigar la injusticia en una variedad de tareas de IA y en una variedad de definiciones de equidad.
 
-Instalar Fairlearn
-Para obtener instrucciones sobre cómo instalar Fairlearn, consulte nuestra guía de inicio rápido.
 
-Uso
-Para el uso común, consulte los portátiles Jupyter y nuestra guía del usuario. Tenga en cuenta que nuestras API están sujetas a cambios, por lo que los portátiles descargados de main pueden no ser compatibles con Fairlearn instalado con pip. En este caso, navegue por las etiquetas en el repositorio (por ejemplo, v0.7.0) para ubicar la versión apropiada del portátil.
+### Métricas de Fairlearn
 
-Contribuyendo
-Para contribuir, consulte nuestra guía para colaboradores.
+Consulte nuestra [guía detallada sobre las métricas de Fairlearn](https://fairlearn.org/main/user_guide/assessment.html).
 
-Mantenedores
-En nuestro sitio web encontrará una lista de los mantenedores actuales.
+### Algoritmos Fairlearn
 
-Asuntos
-Preguntas de uso
-Haga preguntas y ayude a responderlas en Stack Overflow con la etiqueta fairlearn o en Discord.
+Para obtener una descripción general de nuestros algoritmos, consulte nuestro [sitio web](https://fairlearn.org/main/user_guide/mitigation.html).
 
-Problemas habituales (no relacionados con la seguridad)
-Los problemas están pensados ​​para errores, solicitudes de funciones y mejoras en la documentación. Envíe un informe a través de problemas de GitHub. Un mantenedor responderá con prontitud según corresponda.
+## Instalar Fairlearn
+
+Para obtener instrucciones sobre cómo instalar Fairlearn, consulte nuestra [guía de inicio rápido](https://fairlearn.org/main/quickstart.html).
+
+## Uso
+
+Para el uso común, consulte los [Jupyter notebooks](https://github.com/fairlearn/fairlearn/blob/main/notebooks) y nuestra [guía del usuario](https://fairlearn.org/main/user_guide/index.html). Tome en cuenta que nuestras API están sujetas a cambios, por lo que los portátiles descargados de main pueden no ser compatibles con Fairlearn instalado con pip. En este caso, navegue por las etiquetas en el repositorio (por ejemplo, [v0.7.0](https://github.com/fairlearn/fairlearn/tree/v0.7.0)) para ubicar la versión apropiada del portátil.
+
+## Contribuir a Fairlearn
+
+Para contribuir, consulte nuestra [guía para colaboradores](https://fairlearn.org/main/contributor_guide/index.html).
+
+## Mantenedores de Fairlearn
+
+En nuestro [sitio web](https://fairlearn.org/main/about/index.html) encontrará una lista de los mantenedores actuales.
+
+## Propuestas en GitHub
+
+### Preguntas de uso
+
+Haga preguntas y ayude a responderlas en [Stack Overflow](https://stackoverflow.com/questions/tagged/fairlearn) con la etiqueta `fairlearn` o en nuestro servidor de [Discord](https://discord.gg/R22yCfgsRn).
+
+### Problemas habituales (no relacionados con la seguridad)
+
+Las propuestas están dedicadas para bugs (errores de código), 
+
+Issues are meant for bugs, solicitudes de funciones y mejoras en la documentación. Por favor envíe una propuesta a través de GitHub. Un mantenedor responderá con prontitud según corresponda.
 
 Los encargados del mantenimiento intentarán vincular los problemas duplicados cuando sea posible.
 
-Informar problemas de seguridad
-Para informar problemas de seguridad, envíe un correo electrónico a fairlearn-internal@python.org.
+### Informar problemas de seguridad
+
+Para informar problemas de seguridad, envíe un correo electrónico a `fairlearn-internal@python.org`.
