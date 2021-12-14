@@ -7,30 +7,20 @@ Fairlearn es un paquete de Python que permite a los desarrolladores de sistemas 
 
 Sitio web: https://fairlearn.org/
 
-[Lanzamiento actual](https://github.com/lgfunderburk/Fairlearn-es#lanzamiento-actual)
-
-[Lo que queremos decir con * equidad * ](https://github.com/lgfunderburk/Fairlearn-es#qu%C3%A9-entendemos-por-equidad)
-
-[Descripción general de Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#descripci%C3%B3n-general-de-fairlearn)
-
-[Métricas de Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#m%C3%A9tricas-de-fairlearn)
-
-[Algoritmos Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#algoritmos-fairlearn)
-
-[Instalar Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#instalar-fairlearn)
-
-[Uso](https://github.com/lgfunderburk/Fairlearn-es#uso)
-
-[Contribuir a Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#contribuir-a-fairlearn)
-
-[Mantenedores](https://github.com/lgfunderburk/Fairlearn-es#mantenedores-de-fairlearn)
-
-[Propuestas en GitHub](https://github.com/lgfunderburk/Fairlearn-es#propuestas-en-github)
+* [Lanzamiento actual](https://github.com/lgfunderburk/Fairlearn-es#lanzamiento-actual)
+* [Lo que queremos decir con * equidad * ](https://github.com/lgfunderburk/Fairlearn-es#qu%C3%A9-entendemos-por-equidad)
+* [Descripción general de Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#descripci%C3%B3n-general-de-fairlearn)
+* [Métricas de Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#m%C3%A9tricas-de-fairlearn)
+* [Algoritmos Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#algoritmos-fairlearn)
+* [Instalar Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#instalar-fairlearn)
+* [Uso](https://github.com/lgfunderburk/Fairlearn-es#uso)
+* [Contribuir a Fairlearn](https://github.com/lgfunderburk/Fairlearn-es#contribuir-a-fairlearn)
+* [Mantenedores](https://github.com/lgfunderburk/Fairlearn-es#mantenedores-de-fairlearn)
+* [Propuestas en GitHub](https://github.com/lgfunderburk/Fairlearn-es#propuestas-en-github)
 
 ## Lanzamiento actual
 
 * La versión estable actual está disponible en [PyPI](https://pypi.org/project/fairlearn/).
-
 * Nuestra versión actual puede diferir sustancialmente de las versiones anteriores. Los usuarios de versiones anteriores deben visitar nuestra [guía de versiones](https://fairlearn.org/main/user_guide/installation_and_version_guide/version_guide.html) para explorar cambios significativos y encontrar información sobre cómo migrar.
 
 
@@ -53,7 +43,6 @@ La equidad grupal se formaliza mediante un conjunto de restricciones, que requie
 El paquete Fairlearn Python tiene dos componentes:
 
 * *Métricas* para evaluar qué grupos se ven afectados negativamente por un modelo y para comparar varios modelos en términos de diversas métricas de equidad y precisión.
-
 * *Algoritmos* para mitigar la injusticia en una variedad de tareas de IA y en una variedad de definiciones de equidad.
 
 
