@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../contributor_guide/contributing_documentation.rst:4
+msgid "Contributing documentation"
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:6
+msgid ""
+"Documentation is formatted in restructured text (ReST) and the website is"
+" built using `Sphinx <https://www.sphinx-doc.org/en/master/>`_ and some "
+"of its extensions. Specifically, the website is available for all our "
+"releases to allow users to check the documentation of the version of the "
+"package that they are using."
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:12
+msgid "To contribute, make sure to install sphinx and its add-ons by running"
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:19
+msgid ""
+"in the repository root directory. You may also need to `install Pandoc "
+"<https://pandoc.org/installing.html>`_. You can contribute updates to "
+"existing documentation by navigating to the relevant part of the "
+"repository (typically in the `docs` directory), and editing the "
+"restructured text files (`.rst`) corresponding to your updates."
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:25
+msgid ""
+"To build the webpage run the following command from the repository root "
+"directory:"
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:32
+msgid "or use the shortcut"
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:38
+msgid ""
+"This will generate the website in the directory mentioned at the end of "
+"the command. Rerunning this after making changes to individual files only"
+" rebuilds the changed pages, so the build time should be a lot shorter."
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:42
+msgid ""
+"You can check that the document(s) render properly by inspecting the HTML"
+" with the following commands:"
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:52
+msgid ""
+"The above code block works for Windows users. For MacOS users, use :code:"
+" `open docs/_build/html/index.html` For Linux users, use :code: `xdg-open"
+" docs/_build/html/index.html`"
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:58
+msgid ""
+"The rendered HTML files can be explored in any file explorer and then "
+"opened using a browser (e.g., Chrome/Firefox/Safari)."
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:61
+msgid ""
+":code:`plot_*` can be replaced with any of the notebooks in the "
+":code:`auto_examples` folder. To view your changes, simply navigate to "
+"the relevant part of the website and check that your updates render "
+"properly and links work as expected."
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:66
+msgid ""
+"Note that some changes to documentation may involve modifying several "
+"files (i.e: index files, other documents in which the current one should "
+"be linked). Be sure to modify all of the relevant documents and use the "
+"commands above to ensure that they all render properly."
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:73
+msgid ""
+"If you encounter problems with the documentation build (locally or in "
+"your pull request) and need help, simply @mention :code:`@fairlearn"
+"/fairlearn-maintainers` to get help."
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:78
+msgid "Building the website for all versions"
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:80
+msgid ""
+"Our documentation build runs for each pull request and upon merging pull "
+"requests. There should not be a need to run this locally except for very "
+"rare cases."
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:84
+msgid "To fully build the website for all versions use the following script:"
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:90
+msgid "or the shortcut"
+msgstr ""
+
+#: ../../contributor_guide/contributing_documentation.rst:96
+msgid ""
+"The comprehensive set of commands to build the website is in our CircleCI"
+" configuration file in the `.circleci` directory of the repository."
+msgstr ""
+

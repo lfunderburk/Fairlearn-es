@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../contributor_guide/contributing_code.rst:2
+msgid "Contributing code"
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:5
+msgid "API conventions"
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:7
+msgid ""
+"This section relies on the definitions from our :ref:`terminology` guide,"
+" including the definitions of \"estimator\", \"reduction\", \"sensitive "
+"features\", \"moment\", and \"parity\"."
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:12
+msgid "Unfairness mitigation algorithms"
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:14
+msgid ""
+"Unfairness mitigation algorithms take form of scikit-learn-style "
+"estimators. Any algorithm-specific parameters are passed to the "
+"constructor. The resulting instance of the algorithm should support "
+"methods :code:`fit` and :code:`predict` with APIs resembling those of "
+"scikit-learn as much as possible. Any deviations are noted below."
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:21
+msgid "Reductions"
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:23
+msgid ""
+"Reduction constructors require a parameter corresponding to an estimator "
+"that implements the :code:`fit` method with the :code:`sample_weight` "
+"argument. Parity constraints for reductions are expressed via instances "
+"of various subclasses of the class :class:`fairlearn.reductions.Moment`. "
+"Formally, instances of the class :class:`.Moment` implement vector-valued"
+" random variables whose sample averages over the data are required to be "
+"bounded (above and/or below)."
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:36
+msgid ""
+"Reductions provide :code:`fit` and :code:`predict` methods with the "
+"following signatures:"
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:44
+msgid ""
+"All of the currently supported parity constraints (subclasses of "
+":class:`.Moment`) are based on sensitive features that need to be "
+"provided to :code:`fit` as a keyword argument :code:`sensitive_features`."
+" In the future, it will also be possible to provide sensitive features as"
+" columns of :code:`X`."
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:51
+msgid "Postprocessing algorithms"
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:53
+msgid ""
+"The constructors of postprocessing algorithms require either an already "
+"trained predictor or an estimator (which is trained on the data when "
+"executing :code:`fit`). For postprocessing algorithms, the "
+":code:`constraints` argument is provided as a string."
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:62
+msgid ""
+"Post-processing algorithms (such as the ones under "
+":py:mod:`fairlearn.postprocessing`) provide the same functions as the "
+"reductions above albeit with :code:`sensitive_features` as a required "
+"argument for :code:`predict`. In the future, we will make "
+":code:`sensitive_features` optional if the sensitive features are already"
+" provided through :code:`X`."
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:74
+msgid "Code Style"
+msgstr ""
+
+#: ../../contributor_guide/contributing_code.rst:76
+msgid ""
+"We use ``flake8`` to check for PEP8 compatibility issues. You can either "
+"follow the guidelines, or you could run ``black`` on your code. The "
+"generated formatting by ``black`` is compatible with the requirements we "
+"have. You can configure your IDE to use ``black`` to format your code. "
+"Please refer to your IDE's instructions for further details."
+msgstr ""
+

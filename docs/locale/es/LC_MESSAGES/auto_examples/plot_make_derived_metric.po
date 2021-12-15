@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../auto_examples/plot_make_derived_metric.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_auto_examples_plot_make_derived_metric.py>` to "
+"download the full example code"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:23
+msgid "Making Derived Metrics"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:27
+msgid ""
+"This notebook demonstrates the use of the "
+":func:`fairlearn.metrics.make_derived_metric` function. Many higher-order"
+" machine learning algorithms (such as hyperparameter tuners) make use of "
+"scalar metrics when deciding how to proceed. While the "
+":class:`fairlearn.metrics.MetricFrame` has the ability to produce such "
+"scalars through its aggregation functions, its API does not conform to "
+"that usually expected by these algorithms. The "
+":func:`~fairlearn.metrics.make_derived_metric` function exists to bridge "
+"this gap."
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:37
+msgid "Getting the Data"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:39
+msgid ""
+"*This section may be skipped. It simply creates a dataset for "
+"illustrative purposes*"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:42
+msgid ""
+"We will use the well-known UCI 'Adult' dataset as the basis of this "
+"demonstration. This is not for a lending scenario, but we will regard it "
+"as one for the purposes of this example. We will use the existing 'race' "
+"and 'sex' columns (trimming the former to three unique values), and "
+"manufacture credit score bands and loan sizes from other columns. We "
+"start with some uncontroversial `import` statements:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:78
+msgid "Next, we import the data, dropping any rows which are missing data:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:99
+msgid ""
+"We are now going to preprocess the data. Before applying any transforms, "
+"we first split the data into train and test sets. All the transforms we "
+"apply will be trained on the training set, and then applied to the test "
+"set. This ensures that data doesn't leak between the two sets (this is a "
+"serious but subtle `problem in machine learning "
+"<https://en.wikipedia.org/wiki/Leakage_(machine_learning)>`_). So, first "
+"we split the data:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:136
+msgid ""
+"Next, we build two :class:`~sklearn.pipeline.Pipeline` objects to process"
+" the columns, one for numeric data, and the other for categorical data. "
+"Both impute missing values; the difference is whether the data are scaled"
+" (numeric columns) or one-hot encoded (categorical columns). Imputation "
+"of missing values should generally be done with care, since it could "
+"potentially introduce biases. Of course, removing rows with missing data "
+"could also cause trouble, if particular subgroups have poorer data "
+"quality."
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:179
+msgid ""
+"With our preprocessor defined, we can now build a new pipeline which "
+"includes an Estimator:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:206
+msgid ""
+"With the pipeline fully defined, we can first train it with the training "
+"data, and then generate predictions from the test data."
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:228
+msgid "Creating a derived metric"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:230
+msgid ""
+"Suppose our key metric is the accuracy score, and we are most interested "
+"in ensuring that it exceeds some threshold for all subgroups We might use"
+" the :class:`~fairlearn.metrics.MetricFrame` as follows:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:254
+#: ../../auto_examples/plot_make_derived_metric.rst:308
+#: ../../auto_examples/plot_make_derived_metric.rst:352
+#: ../../auto_examples/plot_make_derived_metric.rst:395
+#: ../../auto_examples/plot_make_derived_metric.rst:435
+#: ../../auto_examples/plot_make_derived_metric.rst:475
+msgid "Out:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:265
+msgid ""
+"We can create a function to perform this in a single call using "
+":func:`~fairlearn.metrics.make_derived_metric`. This takes the following "
+"arguments (which must always be supplied as keyword arguments):"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:270
+msgid ":code:`metric=`, the base metric function"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:271
+msgid ""
+":code:`transform=`, the name of the aggregation transformation to "
+"perform. For this demonstration, we want this to be :code:`'group_min'`"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:274
+msgid ""
+":code:`sample_param_names=`, a list of parameter names which should be "
+"treated as sample parameters. This is optional, and defaults to "
+":code:`['sample_weight']` which is appropriate for many metrics in "
+"`scikit-learn`."
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:280
+msgid ""
+"The result is a new function with the same signature as the base metric, "
+"which accepts two extra arguments:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:283
+msgid ""
+":code:`sensitive_features=` to specify the sensitive features which "
+"define the subgroups"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:285
+msgid ""
+":code:`method=` to adjust how the aggregation transformation operates. "
+"This corresponds to the same argument in "
+":meth:`fairlearn.metrics.MetricFrame.difference` and "
+":meth:`fairlearn.metrics.MetricFrame.ratio`"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:290
+msgid ""
+"For the current case, we do not need the :code:`method=` argument, since "
+"we are taking the minimum value."
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:319
+msgid "To show that the returned function also works with sample weights:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:364
+msgid ""
+"The returned function can also handle parameters which are not sample "
+"parameters. Consider :func:`sklearn.metrics.fbeta_score`, which has a "
+"required :code:`beta=` argument (and suppose that this time we are most "
+"interested in the maximum difference to the overall value). First we "
+"evaluate this with a :class:`fairlearn.metrics.MetricFrame`:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:406
+msgid ""
+"And next, we create a function to evaluate the same. Note that we do not "
+"need to use :func:`functools.partial` to bind the :code:`beta=` argument:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:447
+msgid "Pregenerated Metrics"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:449
+msgid ""
+"We provide a number of pregenerated metrics, to cover common use cases. "
+"For example, we provide a :code:`accuracy_score_group_min()` function to "
+"find the minimum over the accuracy scores:"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:488
+msgid "**Total running time of the script:** ( 0 minutes  2.213 seconds)"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:503
+msgid ""
+":download:`Download Python source code: plot_make_derived_metric.py "
+"<plot_make_derived_metric.py>`"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:509
+msgid ""
+":download:`Download Jupyter notebook: plot_make_derived_metric.ipynb "
+"<plot_make_derived_metric.ipynb>`"
+msgstr ""
+
+#: ../../auto_examples/plot_make_derived_metric.rst:516
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+

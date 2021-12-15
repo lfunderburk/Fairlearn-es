@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../contributor_guide/ways_to_contribute.rst:2
+msgid "Ways to contribute"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:4
+msgid "There are many different ways to contribute to Fairlearn, for example:"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:6
+msgid ":doc:`Contribute code <contributing_code>` in the following areas:"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:8
+msgid "unfairness mitigation algorithms"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:9
+msgid "fairness metrics"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:10
+msgid "visualizations"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:12
+msgid ":doc:`Write example notebooks <contributing_example_notebooks>` showcasing"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:14
+msgid "case studies in new application domains"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:15
+msgid "usage of Fairlearn components"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:17
+msgid ":doc:`Improve documentation <contributing_documentation>`, including:"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:19
+msgid "docstrings"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:20
+msgid "website content"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:21
+msgid ""
+"`pointing out shortcomings "
+"<https://github.com/fairlearn/fairlearn/issues/new?assignees=&labels=Documentation&template=doc_improvement.md&title=>`_"
+" of the existing documentation"
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:24
+msgid "`Report bugs <https://github.com/fairlearn/fairlearn/issues/new/choose>`_."
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:25
+msgid ""
+"`Request new features "
+"<https://github.com/fairlearn/fairlearn/issues/new/choose>`_."
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:26
+msgid ":doc:`Write proposals <fairlearn_proposals>` for larger changes."
+msgstr ""
+
+#: ../../contributor_guide/ways_to_contribute.rst:28
+msgid ""
+"All contributions are expected to follow the guide on "
+":ref:`how_to_talk_about_fairness`."
+msgstr ""
+

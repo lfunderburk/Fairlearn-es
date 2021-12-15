@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../contributor_guide/fairlearn_proposals.rst:2
+msgid "API and design proposals"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_proposals.rst:4
+msgid ""
+"Design proposals for larger changes go into the `fairlearn-proposals "
+"repository <https://github.com/fairlearn/fairlearn-proposals>`_. If you "
+"want to submit a proposal, just create a pull request there to kickstart "
+"the review and discussion. You can also submit an issue there, where you "
+"formulate the shortcomings of the existing framework and/or desired "
+"aspects of a new framework."
+msgstr ""
+

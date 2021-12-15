@@ -1,0 +1,617 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../api_reference/fairlearn.datasets.rst:2
+msgid "fairlearn\\.datasets package"
+msgstr ""
+
+#: fairlearn.datasets:1 of
+msgid ""
+"This module contains datasets that can be used for benchmarking and "
+"education."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:1 of
+msgid "Load the UCI Adult dataset (binary classification)."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:3
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:3
+#: fairlearn.datasets._fetch_boston.fetch_boston:3 of
+msgid "Download it if necessary."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:6
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:6
+#: fairlearn.datasets._fetch_boston.fetch_boston:6 of
+msgid "Samples total"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:6 of
+msgid "48842"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:7
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:7
+#: fairlearn.datasets._fetch_boston.fetch_boston:7 of
+msgid "Dimensionality"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:7 of
+msgid "14"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:8
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:8
+#: fairlearn.datasets._fetch_boston.fetch_boston:8 of
+msgid "Features"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:8
+#: fairlearn.datasets._fetch_boston.fetch_boston:8 of
+msgid "real"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:9
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:9 of
+msgid "Classes"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:9
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:9 of
+msgid "2"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:12 of
+msgid "Source: UCI Repository [1]_ , Paper: R. Kohavi (1996) [2]_"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:14 of
+msgid ""
+"Prediction task is to determine whether a person makes over $50,000 a "
+"year."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing
+#: fairlearn.datasets._fetch_boston.fetch_boston of
+msgid "Parameters"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:17
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:23
+#: fairlearn.datasets._fetch_boston.fetch_boston:45 of
+msgid "Whether to cache downloaded datasets using joblib."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:19
+#: fairlearn.datasets._fetch_boston.fetch_boston:47 of
+msgid ""
+"Specify another download and cache folder for the datasets. By default, "
+"all scikit-learn data is stored in '~/.fairlearn-data' subfolders."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:23
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:29
+#: fairlearn.datasets._fetch_boston.fetch_boston:51 of
+msgid ""
+"If True, the data is a pandas DataFrame including columns with "
+"appropriate dtypes (numeric, string or categorical). The target is a "
+"pandas DataFrame or Series depending on the number of target_columns. The"
+" Bunch will contain a ``frame`` attribute with the target and the data. "
+"If ``return_X_y`` is True, then ``(data, target)`` will be pandas "
+"DataFrames or Series as describe above."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:30
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:36
+#: fairlearn.datasets._fetch_boston.fetch_boston:58 of
+msgid "If True, returns ``(data.data, data.target)`` instead of a Bunch object."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing
+#: fairlearn.datasets._fetch_boston.fetch_boston of
+msgid "Returns"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:34 of
+msgid ""
+"* **dataset** (:obj:`~sklearn.utils.Bunch`) -- Dictionary-like object, "
+"with the following attributes.    data : ndarray, shape (48842, 14)"
+"       Each row corresponding to the 14 feature values in order.       If"
+" ``as_frame`` is True, ``data`` is a pandas object.   target : numpy "
+"array of shape (48842,)       Each value represents whether the person "
+"earns more than $50,000       a year (>50K) or not (<=50K).       If "
+"``as_frame`` is True, ``target`` is a pandas object.   feature_names : "
+"list of length 14       Array of ordered feature names used in the "
+"dataset.   DESCR : string       Description of the UCI Adult dataset. * "
+"**(data, target)** (*tuple of (numpy.ndarray, numpy.ndarray) or "
+"(pandas.DataFrame, pandas.Series)*) -- if ``return_X_y`` is True and "
+"``as_frame`` is False * **(data, target)** (*tuple of (pandas.DataFrame, "
+"pandas.Series)*) -- if ``return_X_y`` is True and ``as_frame`` is True"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:34
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:40
+#: fairlearn.datasets._fetch_boston.fetch_boston:65 of
+msgid ""
+"**dataset** (:obj:`~sklearn.utils.Bunch`) -- Dictionary-like object, with"
+" the following attributes."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:37
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:43
+#: fairlearn.datasets._fetch_boston.fetch_boston:68 of
+msgid "data"
+msgstr ""
+
+#: of
+msgid "ndarray, shape (48842, 14)"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:37 of
+msgid ""
+"Each row corresponding to the 14 feature values in order. If ``as_frame``"
+" is True, ``data`` is a pandas object."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:41
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:48
+#: fairlearn.datasets._fetch_boston.fetch_boston:72 of
+msgid "target"
+msgstr ""
+
+#: of
+msgid "numpy array of shape (48842,)"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:40 of
+msgid ""
+"Each value represents whether the person earns more than $50,000 a year "
+"(>50K) or not (<=50K). If ``as_frame`` is True, ``target`` is a pandas "
+"object."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:43
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:50
+#: fairlearn.datasets._fetch_boston.fetch_boston:74 of
+msgid "feature_names"
+msgstr ""
+
+#: of
+msgid "list of length 14"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:44
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:51
+#: fairlearn.datasets._fetch_boston.fetch_boston:75 of
+msgid "Array of ordered feature names used in the dataset."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:45
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:52
+#: fairlearn.datasets._fetch_boston.fetch_boston:76 of
+msgid "DESCR"
+msgstr ""
+
+#: of
+msgid "string"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:46 of
+msgid "Description of the UCI Adult dataset."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:47
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:54
+#: fairlearn.datasets._fetch_boston.fetch_boston:78 of
+msgid ""
+"**(data, target)** (*tuple of (numpy.ndarray, numpy.ndarray) or "
+"(pandas.DataFrame, pandas.Series)*) -- if ``return_X_y`` is True and "
+"``as_frame`` is False"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:48
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:55
+#: fairlearn.datasets._fetch_boston.fetch_boston:79 of
+msgid ""
+"**(data, target)** (*tuple of (pandas.DataFrame, pandas.Series)*) -- if "
+"``return_X_y`` is True and ``as_frame`` is True"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:51
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:58
+#: fairlearn.datasets._fetch_boston.fetch_boston:87 of
+msgid "References"
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:52 of
+msgid ""
+"R. Kohavi and B. Becker, UCI Machine Learning Repository: Adult Data Set,"
+" 01-May-1996. [Online]. Available: "
+"https://archive.ics.uci.edu/ml/datasets/adult."
+msgstr ""
+
+#: fairlearn.datasets._fetch_adult.fetch_adult:56 of
+msgid ""
+"R. Kohavi, \"Scaling Up the Accuracy of Naive-Bayes Classifiers: a "
+"Decision-Tree Hybrid,\" in *Second International Conference on knowledge "
+"discovery and data mining: proceedings: August 2-4, 1996, Portland, "
+"Oregon*, 1996, pp. 202–207."
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:1 of
+msgid "Load the UCI bank marketing dataset (binary classification)."
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:6 of
+msgid "45211"
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:7 of
+msgid "17"
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:8 of
+msgid "numeric, categorical"
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:12 of
+msgid "Source: UCI Repository [3]_ Paper: Moro et al., 2014 [4]_"
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:14 of
+msgid ""
+"The data is related with direct marketing campaigns of a Portuguese "
+"banking institution. The marketing campaigns were based on phone calls. "
+"Often, more than one contact to the same client was required, in order to"
+" access if the product (bank term deposit) would be (or not) subscribed."
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:19 of
+msgid ""
+"The classification goal is to predict if the client will subscribe a term"
+" deposit (variable y)."
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:25 of
+msgid ""
+"Specify another download and cache folder for the datasets. By default, "
+"all data is stored in '~/.fairlearn-data' subfolders."
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:40 of
+msgid ""
+"* **dataset** (:obj:`~sklearn.utils.Bunch`) -- Dictionary-like object, "
+"with the following attributes.    data : ndarray, shape (45211, 17)"
+"       Each row corresponding to the 17 feature values in order.       If"
+" ``as_frame`` is True, ``data`` is a pandas object.   target : numpy "
+"array of shape (45211,)       Each value represents whether the client "
+"subscribed a       term deposit which is 'yes' if the client subscribed "
+"and 'no'       otherwise.       If ``as_frame`` is True, ``target`` is a "
+"pandas object.   feature_names : list of length 17       Array of ordered"
+" feature names used in the dataset.   DESCR : string       Description of"
+" the UCI bank marketing dataset. * **(data, target)** (*tuple of "
+"(numpy.ndarray, numpy.ndarray) or (pandas.DataFrame, pandas.Series)*) -- "
+"if ``return_X_y`` is True and ``as_frame`` is False * **(data, target)** "
+"(*tuple of (pandas.DataFrame, pandas.Series)*) -- if ``return_X_y`` is "
+"True and ``as_frame`` is True"
+msgstr ""
+
+#: of
+msgid "ndarray, shape (45211, 17)"
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:43 of
+msgid ""
+"Each row corresponding to the 17 feature values in order. If ``as_frame``"
+" is True, ``data`` is a pandas object."
+msgstr ""
+
+#: of
+msgid "numpy array of shape (45211,)"
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:46 of
+msgid ""
+"Each value represents whether the client subscribed a term deposit which "
+"is 'yes' if the client subscribed and 'no' otherwise. If ``as_frame`` is "
+"True, ``target`` is a pandas object."
+msgstr ""
+
+#: of
+msgid "list of length 17"
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:53 of
+msgid "Description of the UCI bank marketing dataset."
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:59 of
+msgid ""
+"S. Moro, P. Cortez, and P. Rita, UCI Machine Learning Repository: Bank "
+"Marketing Data Set, 14-Feb-2014. [Online]. Available: "
+"https://archive.ics.uci.edu/ml/datasets/Bank+Marketing."
+msgstr ""
+
+#: fairlearn.datasets._fetch_bank_marketing.fetch_bank_marketing:63 of
+msgid ""
+"S. Moro, P. Cortez and P. Rita. A Data-Driven Approach to Predict the "
+"Success of Bank Telemarketing. Decision Support Systems, Elsevier, "
+"62:22-31, June 2014"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:1 of
+msgid "Load the boston housing dataset (regression)."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:6 of
+msgid "506"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:7 of
+msgid "13"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:9 of
+msgid "Target"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:9 of
+msgid "real 5. - 50."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:12 of
+msgid "Source: OpenML [5]_ Paper: D. Harrison (1978) [6]_"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:14 of
+msgid "The Boston house-price data of D. Harrison, and D.L. Rubinfeld [6]_."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:16 of
+msgid ""
+"Referenced in Belsley, Kuh & Welsch, 'Regression diagnostics...', Wiley, "
+"1980. N.B. [7]_."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:19 of
+msgid ""
+"This dataset has known fairness issues [8]_. There's a \"lower status of "
+"population\" (LSTAT) parameter that you need to look out for and a column"
+" that is a derived from the proportion of people with a black skin color "
+"that live in a neighborhood (B) [9]_. See the references at the bottom "
+"for more detailed information."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:25 of
+msgid "Here's a table of all the variables in order:"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:28 of
+msgid "CRIM"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:28 of
+msgid "per capita crime rate by town"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:29 of
+msgid "ZN"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:29 of
+msgid "proportion of residential land zoned for lots over 25,000 sq.ft."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:30 of
+msgid "INDUS"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:30 of
+msgid "proportion of non-retail business acres per town"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:31 of
+msgid "CHAS"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:31 of
+msgid "Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:32 of
+msgid "NOX"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:32 of
+msgid "nitric oxides concentration (parts per 10 million)"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:33 of
+msgid "RM"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:33 of
+msgid "average number of rooms per dwelling"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:34 of
+msgid "AGE"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:34 of
+msgid "proportion of owner-occupied units built prior to 1940"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:35 of
+msgid "DIS"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:35 of
+msgid "weighted distances to five Boston employment centres"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:36 of
+msgid "RAD"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:36 of
+msgid "index of accessibility to radial highways"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:37 of
+msgid "TAX"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:37 of
+msgid "full-value property-tax rate per $10,000"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:38 of
+msgid "PTRATIO"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:38 of
+msgid "pupil-teacher ratio by town"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:39 of
+msgid "B"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:39 of
+msgid "1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:40 of
+msgid "LSTAT"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:40 of
+#, python-format
+msgid "% lower status of the population"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:41 of
+msgid "MEDV"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:41 of
+msgid "Median value of owner-occupied homes in $1000's"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:61 of
+msgid ""
+"If True, it raises an extra warning to make users aware of the unfairness"
+" aspect of this dataset."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:65 of
+msgid ""
+"* **dataset** (:obj:`~sklearn.utils.Bunch`) -- Dictionary-like object, "
+"with the following attributes.    data : ndarray, shape (506, 13)       "
+"Each row corresponding to the 13 feature values in order.       If "
+"``as_frame`` is True, ``data`` is a pandas object.   target : numpy array"
+" of shape (506,)       Each value corresponds to the average       house "
+"value in units of 100,000.       If ``as_frame`` is True, ``target`` is a"
+" pandas object.   feature_names : list of length 13       Array of "
+"ordered feature names used in the dataset.   DESCR : string       "
+"Description of the Boston housing dataset. * **(data, target)** (*tuple "
+"of (numpy.ndarray, numpy.ndarray) or (pandas.DataFrame, pandas.Series)*) "
+"-- if ``return_X_y`` is True and ``as_frame`` is False * **(data, "
+"target)** (*tuple of (pandas.DataFrame, pandas.Series)*) -- if "
+"``return_X_y`` is True and ``as_frame`` is True"
+msgstr ""
+
+#: of
+msgid "ndarray, shape (506, 13)"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:68 of
+msgid ""
+"Each row corresponding to the 13 feature values in order. If ``as_frame``"
+" is True, ``data`` is a pandas object."
+msgstr ""
+
+#: of
+msgid "numpy array of shape (506,)"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:71 of
+msgid ""
+"Each value corresponds to the average house value in units of 100,000. If"
+" ``as_frame`` is True, ``target`` is a pandas object."
+msgstr ""
+
+#: of
+msgid "list of length 13"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:77 of
+msgid "Description of the Boston housing dataset."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:82 of
+msgid "Notes"
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:83 of
+msgid ""
+"This dataset consists of 506 samples and 13 features. It is notorious for"
+" the fairness issues related to the `B` column. There's more information "
+"in the references."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:88 of
+msgid ""
+"J. Vanschoren, \"boston,\" OpenML, 29-Sep-2014. [Online]. Available: "
+"https://www.openml.org/d/531."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:91 of
+msgid ""
+"D. Harrison and D. L. Rubinfeld, \"Hedonic housing prices and the demand "
+"for clean air,\" Journal of Environmental Economics and Management, vol. "
+"5, no. 1, pp. 81–102, Mar. 1978."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:95 of
+msgid ""
+"D. A. Belsley, E. Kuh, and R. E. Welsch, Regression diagnostics "
+"identifying influential data and sources of collinearity. Hoboken, NJ, "
+"NJ: Wiley-Interscience, 1980."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:99 of
+msgid ""
+"J. Sykes, \"- B 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by"
+" town · Issue #16155 · scikit-learn/scikit-learn,\" GitHub, 18-Jan-2020. "
+"[Online]. Available: https://github.com/scikit-learn/scikit-"
+"learn/issues/16155."
+msgstr ""
+
+#: fairlearn.datasets._fetch_boston.fetch_boston:104 of
+msgid ""
+"M. Carlisle, \"racist data destruction?,\" Medium, 13-Jun-2019. [Online]."
+" Available: https://medium.com/@docintangible/racist-data-destruction-"
+"113e3eff54a8."
+msgstr ""
+

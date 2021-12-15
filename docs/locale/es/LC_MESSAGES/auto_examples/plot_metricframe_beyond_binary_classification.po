@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_auto_examples_plot_metricframe_beyond_binary_classification.py>`"
+" to download the full example code"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:23
+msgid "MetricFrame: Beyond Binary Classification"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:27
+msgid ""
+"This notebook contains examples of using "
+":class:`~fairlearn.metrics.MetricFrame` for tasks which go beyond simple "
+"binary classification."
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:49
+msgid "Multiclass & Nonscalar Results"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:51
+msgid ""
+"Suppose we have a multiclass problem, with labels :math:`\\in {0, 1, 2}`,"
+" and that we wish to generate confusion matrices for each subgroup "
+"identified by the sensitive feature :math:`\\in { a, b, c, d}`. This is "
+"supported readily by :class:`~fairlearn.metrics.MetricFrame`, which does "
+"not require the result of a metric to be a scalar."
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:58
+msgid "First, let us generate some random input data:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:88
+msgid ""
+"To use :func:`~sklearn.metrics.confusion_matrix`, we need to prebind the "
+"`labels` argument, since it is possible that some of the subgroups will "
+"not contain all of the possible labels"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:111
+msgid ""
+"With this now available, we can create our "
+":class:`~fairlearn.metrics.MetricFrame`:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:133
+msgid "From this, we can view the overall confusion matrix:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:148
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:265
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:473
+msgid "Out:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:160
+msgid "And also the confusion matrices for each subgroup:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:228
+msgid ""
+"Obviously, the other methods such as "
+":meth:`~fairlearn.metrics.MetricFrame.group_min` will not work, since "
+"operations such as 'less than' are not well defined for matrices."
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:235
+msgid ""
+"Metric functions with different return types can also be mixed in a "
+"single :class:`~fairlearn.metrics.MetricFrame`. For example:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:287
+msgid "Non-scalar Inputs"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:289
+msgid ""
+":class:`~fairlearn.metrics.MetricFrame` does not require its inputs to be"
+" scalars either. To demonstrate this, we will use an image recognition "
+"example (kindly supplied by Ferdane Bekmezci, Hamid Vaezi Joze and Samira"
+" Pouyanfar)."
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:294
+msgid ""
+"Image recognition algorithms frequently construct a bounding box around "
+"regions where they have found their target features. For example, if an "
+"algorithm detects a face in an image, it will place a bounding box around"
+" it. These bounding boxes constitute `y_pred` for "
+":class:`~fairlearn.metrics.MetricFrame`. The `y_true` values then come "
+"from bounding boxes marked by human labellers."
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:302
+msgid ""
+"Bounding boxes are often compared using the 'iou' metric. This computes "
+"the intersection and the union of the two bounding boxes, and returns the"
+" ratio of their areas. If the bounding boxes are identical, then the "
+"metric will be 1; if disjoint then it will be 0. A function to do this "
+"is:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:367
+msgid ""
+"This is a metric for two bounding boxes, but for "
+":class:`~fairlearn.metrics.MetricFrame` we need to compare two lists of "
+"bounding boxes. For the sake of simplicity, we will return the mean value"
+" of 'iou' for the two lists, but this is by no means the only choice:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:398
+msgid ""
+"We need to generate some input data, so first create a function to "
+"generate a single random bounding box:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:422
+msgid ""
+"Now use this to create sample `y_true` and `y_pred` arrays of bounding "
+"boxes:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:450
+msgid "Finally, we can use these in a :class:`~fairlearn.metrics.MetricFrame`:"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:493
+msgid ""
+"The individual entries in the `y_true` and `y_pred` arrays can be "
+"arbitrarily complex. It is the metric functions which give meaning to "
+"them. Similarly, :class:`~fairlearn.metrics.MetricFrame` does not impose "
+"restrictions on the return type. One can envisage an image recognition "
+"task where there are multiple detectable objects in each picture, and the"
+" image recognition algorithm produces multiple bounding boxes (not "
+"necessarily in a 1-to-1 mapping either). The output of such a scenario "
+"might well be a matrix of some description. Another case where both the "
+"input data and the metrics will be complex is natural language "
+"processing, where each row of the input could be an entire sentence, "
+"possibly with complex word embeddings included."
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:511
+msgid "Conclusion"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:513
+msgid ""
+"This notebook has given some taste of the flexibility of "
+":class:`~fairlearn.metrics.MetricFrame` when it comes to inputs, outputs "
+"and metric functions. The input arrays can have elements of arbitrary "
+"types, and the return values from the metric functions can also be of any"
+" type (although methods such as "
+":meth:`~fairlearn.metrics.MetricFrame.group_min` may not work)."
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:525
+msgid "**Total running time of the script:** ( 0 minutes  0.121 seconds)"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:540
+msgid ""
+":download:`Download Python source code: "
+"plot_metricframe_beyond_binary_classification.py "
+"<plot_metricframe_beyond_binary_classification.py>`"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:546
+msgid ""
+":download:`Download Jupyter notebook: "
+"plot_metricframe_beyond_binary_classification.ipynb "
+"<plot_metricframe_beyond_binary_classification.ipynb>`"
+msgstr ""
+
+#: ../../auto_examples/plot_metricframe_beyond_binary_classification.rst:553
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+

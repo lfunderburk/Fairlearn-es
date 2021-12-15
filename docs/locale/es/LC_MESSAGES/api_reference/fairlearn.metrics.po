@@ -1,0 +1,868 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../api_reference/fairlearn.metrics.rst:2
+msgid "fairlearn\\.metrics package"
+msgstr ""
+
+#: fairlearn.metrics:1 of
+msgid ""
+"Functionality for computing metrics, with a particular focus on "
+"disaggregated metrics."
+msgstr ""
+
+#: fairlearn.metrics:3 of
+msgid ""
+"For our purpose, a metric is a function with signature ``f(y_true, "
+"y_pred, ....)`` where ``y_true`` are the set of true values and "
+"``y_pred`` are values predicted by a machine learning algorithm. Other "
+"arguments may be present (most often sample weights), which will affect "
+"how the metric is calculated."
+msgstr ""
+
+#: fairlearn.metrics:10 of
+msgid ""
+"This module provides the concept of a *disaggregated metric*. This is a "
+"metric where in addition to ``y_true`` and ``y_pred`` values, the user "
+"provides information about group membership for each sample. For example,"
+" a user could provide a 'Gender' column, and the disaggregated metric "
+"would contain separate results for the subgroups 'male', 'female' and "
+"'nonbinary' indicated by that column. The underlying metric function is "
+"evaluated for each of these three subgroups. This extends to multiple "
+"grouping columns, calculating the metric for each combination of "
+"subgroups."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:1 of
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:1 of
+msgid "Collection of disaggregated metric values."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:3 of
+msgid ""
+"This data structure stores and manipulates disaggregated values for any "
+"number of underlying metrics. At least one sensitive feature must be "
+"supplied, which is used to split the data into subgroups. The underlying "
+"metric(s) is(are) calculated across the entire dataset (made available by"
+" the :attr:`.overall` property) and for each identified subgroup (made "
+"available by the :attr:`.by_group` property)."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:9 of
+msgid "The only limitations placed on the metric functions are that:"
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:11 of
+msgid "The first two arguments they take must be ``y_true`` and ``y_pred`` arrays"
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:12 of
+msgid ""
+"Any other arguments must correspond to sample properties (such as sample "
+"weights), meaning that their first dimension is the same as that of "
+"y_true and y_pred. These arguments will be split up along with the "
+"``y_true`` and ``y_pred`` arrays"
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:16 of
+msgid ""
+"The interpretation of the ``y_true`` and ``y_pred`` arrays is up to the "
+"underlying metric - it is perfectly possible to pass in lists of class "
+"probability tuples. We also support non-scalar return types for the "
+"metric function (such as confusion matrices) at the current time. "
+"However, the aggregation functions will not be well defined in this case."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:22 of
+msgid ""
+"Group fairness metrics are obtained by methods that implement various "
+"aggregators over group-level metrics, such such as the maximum, minimum, "
+"or the worst-case difference or ratio."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:26 of
+msgid ""
+"This data structure also supports the concept of 'control features.' Like"
+" the sensitive features, control features identify subgroups within the "
+"data, but aggregations are not performed over the control features. "
+"Instead, the aggregations produce a result for each subgroup identified "
+"by the control feature(s). The name 'control features' refers to the "
+"statistical practice of 'controlling' for a variable."
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_difference
+#: fairlearn.metrics._disparities.demographic_parity_ratio
+#: fairlearn.metrics._disparities.equalized_odds_difference
+#: fairlearn.metrics._disparities.equalized_odds_ratio
+#: fairlearn.metrics._extra_metrics.count
+#: fairlearn.metrics._extra_metrics.false_negative_rate
+#: fairlearn.metrics._extra_metrics.false_positive_rate
+#: fairlearn.metrics._extra_metrics.true_negative_rate
+#: fairlearn.metrics._extra_metrics.true_positive_rate
+#: fairlearn.metrics._make_derived_metric.make_derived_metric
+#: fairlearn.metrics._mean_predictions.mean_prediction
+#: fairlearn.metrics._metric_frame.MetricFrame
+#: fairlearn.metrics._metric_frame.MetricFrame.difference
+#: fairlearn.metrics._metric_frame.MetricFrame.ratio
+#: fairlearn.metrics._selection_rate.selection_rate of
+msgid "Parameters"
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:33 of
+msgid ""
+"The underlying metric functions which are to be calculated. This can "
+"either be a single metric function or a dictionary of functions. These "
+"functions must be callable as ``fn(y_true, y_pred, **sample_params)``. If"
+" there are any other arguments required (such as ``beta`` for "
+":func:`sklearn.metrics.fbeta_score`) then :func:`functools.partial` must "
+"be used.  **Note** that the values returned by various members of the "
+"class change based on whether this argument is a callable or a dictionary"
+" of callables. This distinction remains *even if* the dictionary only "
+"contains a single entry."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:33
+#: fairlearn.metrics._metric_frame.MetricFrame:76 of
+msgid ""
+"The underlying metric functions which are to be calculated. This can "
+"either be a single metric function or a dictionary of functions. These "
+"functions must be callable as ``fn(y_true, y_pred, **sample_params)``. If"
+" there are any other arguments required (such as ``beta`` for "
+":func:`sklearn.metrics.fbeta_score`) then :func:`functools.partial` must "
+"be used."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:41 of
+msgid ""
+"**Note** that the values returned by various members of the class change "
+"based on whether this argument is a callable or a dictionary of "
+"callables. This distinction remains *even if* the dictionary only "
+"contains a single entry."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:46 of
+msgid ""
+"The ground-truth labels (for classification) or target values (for "
+"regression)."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:48 of
+msgid "The predictions."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:50 of
+msgid ""
+"The sensitive features which should be used to create the subgroups. At "
+"least one sensitive feature must be provided. All names (whether on "
+"pandas objects or dictionary keys) must be strings. We also forbid "
+"DataFrames with column names of ``None``. For cases where no names are "
+"provided we generate names ``sensitive_feature_[n]``."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:56 of
+msgid ""
+"Control features are similar to sensitive features, in that they divide "
+"the input data into subgroups. Unlike the sensitive features, "
+"aggregations are not performed across the control features - for example,"
+" the ``overall`` property will have one value for each subgroup in the "
+"control feature(s), rather than a single value for the entire data set. "
+"Control features can be specified similarly to the sensitive features. "
+"However, their default names (if none can be identified in the input "
+"values) are of the format ``control_feature_[n]``.  **Note** the types "
+"returned by members of the class vary based on whether control features "
+"are present."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:56 of
+msgid ""
+"Control features are similar to sensitive features, in that they divide "
+"the input data into subgroups. Unlike the sensitive features, "
+"aggregations are not performed across the control features - for example,"
+" the ``overall`` property will have one value for each subgroup in the "
+"control feature(s), rather than a single value for the entire data set. "
+"Control features can be specified similarly to the sensitive features. "
+"However, their default names (if none can be identified in the input "
+"values) are of the format ``control_feature_[n]``."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:66 of
+msgid ""
+"**Note** the types returned by members of the class vary based on whether"
+" control features are present."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:69 of
+msgid ""
+"Parameters for the metric function(s). If there is only one metric "
+"function, then this is a dictionary of strings and array-like objects, "
+"which are split alongside the ``y_true`` and ``y_pred`` arrays, and "
+"passed to the metric function. If there are multiple metric functions "
+"(passed as a dictionary), then this is a nested dictionary, with the "
+"first set of string keys identifying the metric function name, with the "
+"values being the string-to-array-like dictionaries."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:76 of
+msgid ""
+"The underlying metric functions which are to be calculated. This can "
+"either be a single metric function or a dictionary of functions. These "
+"functions must be callable as ``fn(y_true, y_pred, **sample_params)``. If"
+" there are any other arguments required (such as ``beta`` for "
+":func:`sklearn.metrics.fbeta_score`) then :func:`functools.partial` must "
+"be used.  .. deprecated:: 0.7.0     `metric` will be removed in version "
+"0.10.0, use `metrics` instead."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame:84 of
+msgid "`metric` will be removed in version 0.10.0, use `metrics` instead."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.difference:1 of
+msgid "Return the maximum absolute difference between groups for each metric."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.difference:3 of
+msgid ""
+"This method calculates a scalar value for each underlying metric by "
+"finding the maximum absolute difference between the entries in each "
+"combination of sensitive features in the :attr:`.by_group` property."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.difference:7
+#: fairlearn.metrics._metric_frame.MetricFrame.ratio:8 of
+msgid ""
+"Similar to other methods, the result type varies with the specification "
+"of the metric functions, and whether control features are present or not."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.difference:11 of
+msgid ""
+"There are two allowed values for the ``method=`` parameter. The value "
+"``between_groups`` computes the maximum difference between any two pairs "
+"of groups in the :attr:`.by_group` property (i.e. ``group_max() - "
+"group_min()``). Alternatively, ``to_overall`` computes the difference "
+"between each subgroup and the corresponding value from :attr:`.overall` "
+"(if there are control features, then :attr:`.overall` is multivalued for "
+"each metric). The result is the absolute maximum of these values."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.difference:21
+#: fairlearn.metrics._metric_frame.MetricFrame.ratio:23 of
+msgid "How to compute the aggregate. Default is :code:`between_groups`"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.by_group
+#: fairlearn.metrics.MetricFrame.control_levels
+#: fairlearn.metrics.MetricFrame.overall
+#: fairlearn.metrics.MetricFrame.sensitive_levels
+#: fairlearn.metrics._disparities.demographic_parity_difference
+#: fairlearn.metrics._disparities.demographic_parity_ratio
+#: fairlearn.metrics._disparities.equalized_odds_difference
+#: fairlearn.metrics._disparities.equalized_odds_ratio
+#: fairlearn.metrics._extra_metrics.count
+#: fairlearn.metrics._extra_metrics.false_negative_rate
+#: fairlearn.metrics._extra_metrics.false_positive_rate
+#: fairlearn.metrics._extra_metrics.true_negative_rate
+#: fairlearn.metrics._extra_metrics.true_positive_rate
+#: fairlearn.metrics._make_derived_metric.make_derived_metric
+#: fairlearn.metrics._metric_frame.MetricFrame.difference
+#: fairlearn.metrics._metric_frame.MetricFrame.group_max
+#: fairlearn.metrics._metric_frame.MetricFrame.group_min
+#: fairlearn.metrics._metric_frame.MetricFrame.ratio of
+msgid "Returns"
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.difference:24
+#: fairlearn.metrics._metric_frame.MetricFrame.ratio:26 of
+msgid "The exact type follows the table in :attr:`.MetricFrame.overall`."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.by_group
+#: fairlearn.metrics.MetricFrame.control_levels
+#: fairlearn.metrics.MetricFrame.overall
+#: fairlearn.metrics.MetricFrame.sensitive_levels
+#: fairlearn.metrics._disparities.demographic_parity_difference
+#: fairlearn.metrics._disparities.demographic_parity_ratio
+#: fairlearn.metrics._disparities.equalized_odds_difference
+#: fairlearn.metrics._disparities.equalized_odds_ratio
+#: fairlearn.metrics._extra_metrics.count
+#: fairlearn.metrics._extra_metrics.false_negative_rate
+#: fairlearn.metrics._extra_metrics.false_positive_rate
+#: fairlearn.metrics._extra_metrics.true_negative_rate
+#: fairlearn.metrics._extra_metrics.true_positive_rate
+#: fairlearn.metrics._make_derived_metric.make_derived_metric
+#: fairlearn.metrics._mean_predictions.mean_prediction
+#: fairlearn.metrics._metric_frame.MetricFrame.difference
+#: fairlearn.metrics._metric_frame.MetricFrame.group_max
+#: fairlearn.metrics._metric_frame.MetricFrame.group_min
+#: fairlearn.metrics._metric_frame.MetricFrame.ratio
+#: fairlearn.metrics._selection_rate.selection_rate of
+msgid "Return type"
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.group_max:1 of
+msgid "Return the maximum value of the metric over the sensitive features."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.group_max:3 of
+msgid ""
+"This method computes the maximum value over all combinations of sensitive"
+" features for each underlying metric function in the :attr:`.by_group` "
+"property (it will only succeed if all the underlying metric functions "
+"return scalar values). The exact return type depends on whether control "
+"features are present, and whether the metric functions were specified as "
+"a single callable or a dictionary."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.group_max:10 of
+msgid ""
+"The maximum value over sensitive features. The exact type follows the "
+"table in :attr:`.MetricFrame.overall`."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.group_min:1 of
+msgid "Return the minimum value of the metric over the sensitive features."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.group_min:3 of
+msgid ""
+"This method computes the minimum value over all combinations of sensitive"
+" features for each underlying metric function in the :attr:`.by_group` "
+"property (it will only succeed if all the underlying metric functions "
+"return scalar values). The exact return type depends on whether control "
+"features are present, and whether the metric functions were specified as "
+"a single callable or a dictionary."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.group_min:10 of
+msgid ""
+"The minimum value over sensitive features. The exact type follows the "
+"table in :attr:`.MetricFrame.overall`."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.ratio:1 of
+msgid "Return the minimum ratio between groups for each metric."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.ratio:3 of
+msgid ""
+"This method calculates a scalar value for each underlying metric by "
+"finding the minimum ratio (that is, the ratio is forced to be less than "
+"unity) between the entries in each column of the :attr:`.by_group` "
+"property."
+msgstr ""
+
+#: fairlearn.metrics._metric_frame.MetricFrame.ratio:12 of
+msgid ""
+"There are two allowed values for the ``method=`` parameter. The value "
+"``between_groups`` computes the minimum ratio between any two pairs of "
+"groups in the :attr:`.by_group` property (i.e. ``group_min() / "
+"group_max()``). Alternatively, ``to_overall`` computes the ratio between "
+"each subgroup and the corresponding value from :attr:`.overall` (if there"
+" are control features, then :attr:`.overall` is multivalued for each "
+"metric), expressing the ratio as a number less than 1. The result is the "
+"minimum of these values."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.by_group:1 of
+msgid "Return the collection of metrics evaluated for each subgroup."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.by_group:3 of
+msgid ""
+"The collection is defined by the combination of classes in the sensitive "
+"and control features. The exact type depends on the specification of the "
+"metric function."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.by_group:7 of
+msgid ""
+"When a callable is supplied to the constructor, the result is a "
+":class:`pandas.Series`, indexed by the combinations of subgroups in the "
+"sensitive and control features.  When the metric functions were specified"
+" with a dictionary (even if the dictionary only has a single entry), then"
+" the result is a :class:`pandas.DataFrame` with columns named after the "
+"metric functions, and rows indexed by the combinations of subgroups in "
+"the sensitive and control features.  If a particular combination of "
+"subgroups was not present in the dataset (likely to occur as more "
+"sensitive and control features are specified), then the corresponding "
+"entry will be NaN."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.by_group:7 of
+msgid ""
+"When a callable is supplied to the constructor, the result is a "
+":class:`pandas.Series`, indexed by the combinations of subgroups in the "
+"sensitive and control features."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.by_group:11 of
+msgid ""
+"When the metric functions were specified with a dictionary (even if the "
+"dictionary only has a single entry), then the result is a "
+":class:`pandas.DataFrame` with columns named after the metric functions, "
+"and rows indexed by the combinations of subgroups in the sensitive and "
+"control features."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.by_group:17 of
+msgid ""
+"If a particular combination of subgroups was not present in the dataset "
+"(likely to occur as more sensitive and control features are specified), "
+"then the corresponding entry will be NaN."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.control_levels:1 of
+msgid "Return a list of feature names which are produced by control features."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.control_levels:3 of
+msgid ""
+"If control features are present, then the rows of the :attr:`.by_group` "
+"property have a :class:`pandas.MultiIndex` index. This property "
+"identifies which elements of that index are control features."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.control_levels:7
+#: fairlearn.metrics.MetricFrame.sensitive_levels:6 of
+msgid ""
+"List of names, which can be used in calls to "
+":meth:`pandas.DataFrame.groupby` etc."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:1 of
+msgid "Return the underlying metrics evaluated on the whole dataset."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:3 of
+msgid ""
+"The exact type varies based on whether control featuers were provided and"
+" how the metric functions were specified.  ======== ================  "
+"================================= Metrics  Control Features  Result Type "
+"======== ================  ================================= Callable "
+"None              Return type of callable -------- ----------------  "
+"--------------------------------- Callable Provided          Series, "
+"indexed by the subgroups                            of the conditional "
+"feature(s) -------- ----------------  --------------------------------- "
+"Dict     None              Series, indexed by the metric"
+"                            names -------- ----------------  "
+"--------------------------------- Dict     Provided          DataFrame. "
+"Columns are                            metric names, rows are subgroups"
+"                            of conditional feature(s) ======== "
+"================  =================================  The distinction "
+"applies even if the dictionary contains a single metric function. This is"
+" to allow for a consistent interface when calling programatically, while "
+"also reducing typing for those using Fairlearn interactively."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:3 of
+msgid ""
+"The exact type varies based on whether control featuers were provided and"
+" how the metric functions were specified."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:7 of
+msgid "Metrics"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:7 of
+msgid "Control Features"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:7 of
+msgid "Result Type"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:9
+#: fairlearn.metrics.MetricFrame.overall:11 of
+msgid "Callable"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:9
+#: fairlearn.metrics.MetricFrame.overall:14 of
+msgid "None"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:9 of
+msgid "Return type of callable"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:11
+#: fairlearn.metrics.MetricFrame.overall:17 of
+msgid "Provided"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:11 of
+msgid "Series, indexed by the subgroups of the conditional feature(s)"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:14
+#: fairlearn.metrics.MetricFrame.overall:17 of
+msgid "Dict"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:14 of
+msgid "Series, indexed by the metric names"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:17 of
+msgid ""
+"DataFrame. Columns are metric names, rows are subgroups of conditional "
+"feature(s)"
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.overall:22 of
+msgid ""
+"The distinction applies even if the dictionary contains a single metric "
+"function. This is to allow for a consistent interface when calling "
+"programatically, while also reducing typing for those using Fairlearn "
+"interactively."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.sensitive_levels:1 of
+msgid ""
+"Return a list of the feature names which are produced by sensitive "
+"features."
+msgstr ""
+
+#: fairlearn.metrics.MetricFrame.sensitive_levels:3 of
+msgid ""
+"In cases where the :attr:`.by_group` property has a "
+":class:`pandas.MultiIndex` index, this identifies which elements of the "
+"index are sensitive features."
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.count:1 of
+msgid ""
+"Calculate the number of data points in each group when working with "
+"`MetricFrame`."
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.count:3 of
+msgid ""
+"The ``y_true`` argument is used to make this calculation. For consistency"
+" with other metric functions, the ``y_pred`` argument is required, but "
+"ignored."
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.count:6 of
+msgid "The list of true labels"
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.count:8 of
+msgid "The predicted labels (ignored)"
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.count:11 of
+msgid "The number of data points in each group."
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_difference:1 of
+msgid "Calculate the demographic parity difference."
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_difference:3 of
+msgid ""
+"The demographic parity difference is defined as the difference between "
+"the largest and the smallest group-level selection rate, :math:`E[h(X) | "
+"A=a]`, across all values :math:`a` of the sensitive feature(s). The "
+"demographic parity difference of 0 means that all groups have the same "
+"selection rate."
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_difference:8
+#: fairlearn.metrics._disparities.demographic_parity_ratio:8
+#: fairlearn.metrics._disparities.equalized_odds_difference:11
+#: fairlearn.metrics._disparities.equalized_odds_ratio:11 of
+msgid "Ground truth (correct) labels."
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_difference:10
+#: fairlearn.metrics._disparities.demographic_parity_ratio:10
+#: fairlearn.metrics._disparities.equalized_odds_difference:13
+#: fairlearn.metrics._disparities.equalized_odds_ratio:13 of
+msgid "Predicted labels :math:`h(X)` returned by the classifier."
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_difference:12
+#: fairlearn.metrics._disparities.demographic_parity_ratio:12
+#: fairlearn.metrics._disparities.equalized_odds_difference:15
+#: fairlearn.metrics._disparities.equalized_odds_ratio:15 of
+msgid "The sensitive features over which demographic parity should be assessed"
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_difference:13
+#: fairlearn.metrics._disparities.equalized_odds_difference:16 of
+msgid ""
+"How to compute the differences. See "
+":func:`fairlearn.metrics.MetricFrame.difference` for details."
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_difference:16
+#: fairlearn.metrics._disparities.demographic_parity_ratio:16
+#: fairlearn.metrics._disparities.equalized_odds_difference:19
+#: fairlearn.metrics._disparities.equalized_odds_ratio:19 of
+msgid "The sample weights"
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_difference:19 of
+msgid "The demographic parity difference"
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_ratio:1 of
+msgid "Calculate the demographic parity ratio."
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_ratio:3 of
+msgid ""
+"The demographic parity ratio is defined as the ratio between the smallest"
+" and the largest group-level selection rate, :math:`E[h(X) | A=a]`, "
+"across all values :math:`a` of the sensitive feature(s). The demographic "
+"parity ratio of 1 means that all groups have the same selection rate."
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_ratio:13
+#: fairlearn.metrics._disparities.equalized_odds_ratio:16 of
+msgid ""
+"How to compute the differences. See "
+":func:`fairlearn.metrics.MetricFrame.ratio` for details."
+msgstr ""
+
+#: fairlearn.metrics._disparities.demographic_parity_ratio:19 of
+msgid "The demographic parity ratio"
+msgstr ""
+
+#: fairlearn.metrics._disparities.equalized_odds_difference:1 of
+msgid "Calculate the equalized odds difference."
+msgstr ""
+
+#: fairlearn.metrics._disparities.equalized_odds_difference:3 of
+msgid ""
+"The greater of two metrics: `true_positive_rate_difference` and "
+"`false_positive_rate_difference`. The former is the difference between "
+"the largest and smallest of :math:`P[h(X)=1 | A=a, Y=1]`, across all "
+"values :math:`a` of the sensitive feature(s). The latter is defined "
+"similarly, but for :math:`P[h(X)=1 | A=a, Y=0]`. The equalized odds "
+"difference of 0 means that all groups have the same true positive, true "
+"negative, false positive, and false negative rates."
+msgstr ""
+
+#: fairlearn.metrics._disparities.equalized_odds_difference:22 of
+msgid "The equalized odds difference"
+msgstr ""
+
+#: fairlearn.metrics._disparities.equalized_odds_ratio:1 of
+msgid "Calculate the equalized odds ratio."
+msgstr ""
+
+#: fairlearn.metrics._disparities.equalized_odds_ratio:3 of
+msgid ""
+"The smaller of two metrics: `true_positive_rate_ratio` and "
+"`false_positive_rate_ratio`. The former is the ratio between the smallest"
+" and largest of :math:`P[h(X)=1 | A=a, Y=1]`, across all values :math:`a`"
+" of the sensitive feature(s). The latter is defined similarly, but for "
+":math:`P[h(X)=1 | A=a, Y=0]`. The equalized odds ratio of 1 means that "
+"all groups have the same true positive, true negative, false positive, "
+"and false negative rates."
+msgstr ""
+
+#: fairlearn.metrics._disparities.equalized_odds_ratio:22 of
+msgid "The equalized odds ratio"
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.false_negative_rate:1 of
+msgid "Calculate the false negative rate (also called miss rate)."
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.false_negative_rate:3
+#: fairlearn.metrics._extra_metrics.false_positive_rate:3
+#: fairlearn.metrics._extra_metrics.true_negative_rate:3
+#: fairlearn.metrics._extra_metrics.true_positive_rate:3 of
+msgid "The list of true values"
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.false_negative_rate:5
+#: fairlearn.metrics._extra_metrics.false_positive_rate:5
+#: fairlearn.metrics._extra_metrics.true_negative_rate:5
+#: fairlearn.metrics._extra_metrics.true_positive_rate:5 of
+msgid "The list of predicted values"
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.false_negative_rate:7
+#: fairlearn.metrics._extra_metrics.false_positive_rate:7
+#: fairlearn.metrics._extra_metrics.true_negative_rate:7
+#: fairlearn.metrics._extra_metrics.true_positive_rate:7 of
+msgid ""
+"A list of weights to apply to each sample. By default all samples are "
+"weighted equally"
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.false_negative_rate:10
+#: fairlearn.metrics._extra_metrics.false_positive_rate:10
+#: fairlearn.metrics._extra_metrics.true_negative_rate:10
+#: fairlearn.metrics._extra_metrics.true_positive_rate:10 of
+msgid ""
+"The value to treat as the 'positive' label in the samples. If `None` (the"
+" default) then the largest unique value of the y arrays will be used."
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.false_negative_rate:14 of
+msgid "The false negative rate for the data"
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.false_positive_rate:1 of
+msgid "Calculate the false positive rate (also called fall-out)."
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.false_positive_rate:14 of
+msgid "The false positive rate for the data"
+msgstr ""
+
+#: fairlearn.metrics._make_derived_metric.make_derived_metric:1 of
+msgid ""
+"Create a scalar returning metric function based on aggregation of a "
+"disaggregated metric."
+msgstr ""
+
+#: fairlearn.metrics._make_derived_metric.make_derived_metric:3 of
+msgid ""
+"Many higher order machine learning operations (such as hyperparameter "
+"tuning) make use of functions which return scalar metrics. We can create "
+"such a function for our disaggregated metrics with this function."
+msgstr ""
+
+#: fairlearn.metrics._make_derived_metric.make_derived_metric:7 of
+msgid ""
+"This function takes a metric function, a string to specify the desired "
+"aggregation transform (matching the methods "
+":meth:`MetricFrame.group_min`, :meth:`MetricFrame.group_max`, "
+":meth:`MetricFrame.difference` and :meth:`MetricFrame.ratio`), and a list"
+" of parameter names to treat as sample parameters."
+msgstr ""
+
+#: fairlearn.metrics._make_derived_metric.make_derived_metric:13 of
+msgid ""
+"The result is a callable object which has the same signature as the "
+"original function, with a :code:`sensitive_features=` parameter added. If"
+" the chosen aggregation transform accepts parameters (currently only "
+":code:`method=` is supported), these can also be given when invoking the "
+"callable object. The result of this function is identical to creating a "
+":class:`MetricFrame` object, and then calling the method specified by the"
+" :code:`transform=` argument (with the :code:`method=` argument, if "
+"required)."
+msgstr ""
+
+#: fairlearn.metrics._make_derived_metric.make_derived_metric:23 of
+msgid ""
+"See the :ref:`scalar_metric_results` section in the :ref:`user_guide` for"
+" more details. A :ref:`sample notebook "
+"<sphx_glr_auto_examples_plot_make_derived_metric.py>` is also available."
+msgstr ""
+
+#: fairlearn.metrics._make_derived_metric.make_derived_metric:29 of
+msgid "The metric function from which the new function should be derived"
+msgstr ""
+
+#: fairlearn.metrics._make_derived_metric.make_derived_metric:32 of
+msgid "Selects the transformation aggregation the resultant function should use"
+msgstr ""
+
+#: fairlearn.metrics._make_derived_metric.make_derived_metric:35 of
+msgid ""
+"A list of parameters names of the underlying :code:`metric` which should "
+"be treated as sample parameters (i.e. the same leading dimension as the "
+":code:`y_true` and :code:`y_pred` parameters). This defaults to a list "
+"with a single entry of :code:`sample_weight` (as used by many SciKit-"
+"Learn metrics). If :code:`None` or an empty list is supplied, then no "
+"parameters will be treated as sample parameters."
+msgstr ""
+
+#: fairlearn.metrics._make_derived_metric.make_derived_metric:43 of
+msgid ""
+"Function with the same signature as the :code:`metric` but with "
+"additional :code:`sensitive_feature=` and :code:`method=` arguments, to "
+"enable the required computation"
+msgstr ""
+
+#: fairlearn.metrics._mean_predictions.mean_prediction:1 of
+msgid "Calculate the (weighted) mean prediction."
+msgstr ""
+
+#: fairlearn.metrics._mean_predictions.mean_prediction:3 of
+msgid ""
+"The true values are ignored, but required as an argument in order to "
+"maintain a consistent interface"
+msgstr ""
+
+#: fairlearn.metrics._mean_predictions.mean_prediction:6
+#: fairlearn.metrics._selection_rate.selection_rate:7 of
+msgid "The true labels (ignored)"
+msgstr ""
+
+#: fairlearn.metrics._mean_predictions.mean_prediction:8
+#: fairlearn.metrics._selection_rate.selection_rate:9 of
+msgid "The predicted labels"
+msgstr ""
+
+#: fairlearn.metrics._mean_predictions.mean_prediction:10
+#: fairlearn.metrics._selection_rate.selection_rate:14 of
+msgid "Optional array of sample weights"
+msgstr ""
+
+#: fairlearn.metrics._mean_predictions.mean_prediction:14
+#: fairlearn.metrics._selection_rate.selection_rate:18 of
+msgid ":py:class:`float`"
+msgstr ""
+
+#: fairlearn.metrics._selection_rate.selection_rate:1 of
+msgid "Calculate the fraction of predicted labels matching the 'good' outcome."
+msgstr ""
+
+#: fairlearn.metrics._selection_rate.selection_rate:3 of
+msgid ""
+"The argument `pos_label` specifies the 'good' outcome. For consistency "
+"with other metric functions, the ``y_true`` argument is required, but "
+"ignored."
+msgstr ""
+
+#: fairlearn.metrics._selection_rate.selection_rate:12 of
+msgid "The label to treat as the 'good' outcome"
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.true_negative_rate:1 of
+msgid "Calculate the true negative rate (also called specificity or selectivity)."
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.true_negative_rate:14 of
+msgid "The true negative rate for the data"
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.true_positive_rate:1 of
+msgid ""
+"Calculate the true positive rate (also called sensitivity, recall, or hit"
+" rate)."
+msgstr ""
+
+#: fairlearn.metrics._extra_metrics.true_positive_rate:14 of
+msgid "The true positive rate for the data"
+msgstr ""
+
