@@ -30,8 +30,8 @@ print("================================")
 # -- Project information -----------------------------------------------------
 
 project = 'Fairlearn'
-copyright = f'2018 - {datetime.now().year}, Fairlearn contributors'
-author = 'Fairlearn contributors'
+copyright = f'2018 - {datetime.now().year}, contribuyentes de Fairlearn'
+author = 'Contribuyentes de Fairlearn, traducción Laura Gutierrez Funderburk'
 
 # The full version, including alpha/beta/rc tags
 release = fairlearn.__version__

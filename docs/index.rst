@@ -4,17 +4,21 @@
    contain the root `toctree` directive.
 
 ¡Bienvenides a la documentación de Fairlearn!
-=======================================
+=============================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
 
+   acerca_de/index
 
+   quickstart
 
-Contenido
-==================
+   guia_usuario/index
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   referencia_api/index
+
+   auto_examples/index
+
+   guia_contribuyente/index
+
+   preguntas_frequentes

@@ -4,7 +4,11 @@
 
 .. _sphx_glr_auto_examples:
 
-# Ejemplos (Jupyter Notebooks)
+.. _examples:
+
+Ejemplos (Jupyter Notebooks)
+============================
+
 Aquí hay una lista de ejemplos sobre cómo usar la biblioteca. Pronto agregaremos más ejemplos.
 Si está interesado en contribuir a los cuadernos existentes o agregar nuevos, consulte la
 guía en: ref: `contribample_notebooks`.
@@ -14,6 +18,132 @@ Nota
 La API de Fairlearn aún está evolucionando, por lo que si desea ejecutarlas en su instalación
 local de Fairlearn, asegúrese de que coincidan con las versiones.
 
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Selection rates in census dataset">
+
+.. only:: html
+
+ .. figure:: /auto_examples/images/thumb/sphx_glr_plot_quickstart_selection_rate_thumb.png
+     :alt: Selection rates in census dataset
+
+     :ref:`sphx_glr_auto_examples_plot_quickstart_selection_rate.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/plot_quickstart_selection_rate
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="MetricFrame visualizations">
+
+.. only:: html
+
+ .. figure:: /auto_examples/images/thumb/sphx_glr_plot_quickstart_thumb.png
+     :alt: MetricFrame visualizations
+
+     :ref:`sphx_glr_auto_examples_plot_quickstart.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/plot_quickstart
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="MetricFrame: Beyond Binary Classification">
+
+.. only:: html
+
+ .. figure:: /auto_examples/images/thumb/sphx_glr_plot_metricframe_beyond_binary_classification_thumb.png
+     :alt: MetricFrame: Beyond Binary Classification
+
+     :ref:`sphx_glr_auto_examples_plot_metricframe_beyond_binary_classification.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/plot_metricframe_beyond_binary_classification
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Obteniendo métricas derivadas">
+
+.. only:: html
+
+ .. figure:: /auto_examples/images/thumb/sphx_glr_plot_make_derived_metric_thumb.png
+     :alt: Obteniendo métricas derivadas
+
+     :ref:`sphx_glr_auto_examples_plot_make_derived_metric.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/plot_make_derived_metric
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="GridSearch con datos de censo">
+
+.. only:: html
+
+ .. figure:: /auto_examples/images/thumb/sphx_glr_plot_grid_search_census_thumb.png
+     :alt: GridSearch con datos de censo
+
+     :ref:`sphx_glr_auto_examples_plot_grid_search_census.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/plot_grid_search_census
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Metrics with Multiple Features">
+
+.. only:: html
+
+ .. figure:: /auto_examples/images/thumb/sphx_glr_plot_new_metrics_thumb.png
+     :alt: Metrics with Multiple Features
+
+     :ref:`sphx_glr_auto_examples_plot_new_metrics.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/plot_new_metrics
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
