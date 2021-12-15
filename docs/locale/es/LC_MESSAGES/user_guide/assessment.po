@@ -1,0 +1,437 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../user_guide/assessment.rst:2
+msgid "Assessment"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:5
+msgid "Metrics"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:9
+msgid ""
+"The :py:mod:`fairlearn.metrics` module provides the means to assess "
+"fairness-related metrics for models. This applies for any kind of model "
+"that users may already use, but also for models created with mitigation "
+"techniques from the :ref:`mitigation` section. The :ref:`dashboard` "
+"provides a visual way to compare metrics between models as well as "
+"compare metrics for different groups on a single model."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:17
+msgid "Ungrouped Metrics"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:19
+msgid ""
+"At their simplest, metrics take a set of 'true' values :math:`Y_{true}` "
+"(from the input data) and predicted values :math:`Y_{pred}` (by applying "
+"the model to the input data), and use these to compute a measure. For "
+"example, the *recall* or *true positive rate* is given by"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:24
+msgid "P( Y_{pred}=1 \\given Y_{true}=1 )"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:28
+msgid ""
+"That is, a measure of whether the model finds all the positive cases in "
+"the input data. The `scikit-learn` package implements this in "
+":py:func:`sklearn.metrics.recall_score`."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:32
+msgid ""
+"Suppose we have the following data we can see that the prediction is `1` "
+"in five of the ten cases where the true value is `1`, so we expect the "
+"recall to be 0.5:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:46
+msgid "Metrics with Grouping"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:48
+msgid ""
+"When considering fairness, each row of input data will have an associated"
+" group label :math:`g \\in G`, and we will want to know how the metric "
+"behaves for each :math:`g`. To help with this, Fairlearn provides a "
+"class, which takes an existing (ungrouped) metric function, and applies "
+"it to each group within a set of data."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:54
+msgid ""
+"Suppose in addition to the :math:`Y_{true}` and :math:`Y_{pred}` above, "
+"we had the following set of labels:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:88
+msgid "We then calculate a metric which shows the subgroups:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:102
+msgid ""
+"Note that the overall recall is the same as that calculated above in the "
+"Ungrouped Metric section, while the 'by group' dictionary can be checked "
+"against the table above."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:106
+msgid ""
+"In addition to these basic scores, Fairlearn also provides convenience "
+"functions to recover the maximum and minimum values of the metric across "
+"groups and also the difference and ratio between the maximum and minimum:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:121
+msgid ""
+"A single instance of :class:`fairlearn.metrics.MetricFrame` can evaluate "
+"multiple metrics simultaneously (note that "
+":func:`fairlearn.metrics.count` can be used to show each group's size):"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:146
+msgid ""
+"If there are per-sample arguments (such as sample weights), these can "
+"also be provided in a dictionary via the ``sample_params`` argument.:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:169
+msgid ""
+"If multiple metrics are being evaluated, then ``sample_params`` becomes a"
+" dictionary of dictionaries, with the first key corresponding matching "
+"that in the dictionary holding the desired underlying metric functions."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:173
+msgid ""
+"We do not support non-sample parameters at the current time. If these are"
+" required, then use :func:`functools.partial` to prebind the required "
+"arguments to the metric function:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:196
+msgid ""
+"Finally, multiple sensitive features can be specified. The ``by_groups`` "
+"property then holds the intersections of these groups:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:223
+msgid ""
+"With such a small number of samples, we are obviously running into cases "
+"where there are no members in a particular combination of sensitive "
+"features. In this case we see that the subgroup ``(a, 8)`` has a result "
+"of ``NaN``, indicating that there were no samples in it."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:231
+msgid "Scalar Results from :code:`MetricFrame`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:233
+msgid ""
+"Higher level machine learning algorithms (such as hyperparameter tuners) "
+"often make use of metric functions to guide their optimisations. Such "
+"algorithms generally work with scalar results, so if we want the tuning "
+"to be done on the basis of our fairness metrics, we need to perform "
+"aggregations over the :class:`MetricFrame`."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:239
+msgid ""
+"We provide a convenience function, "
+":func:`fairlearn.metrics.make_derived_metric`, to generate scalar-"
+"producing metric functions based on the aggregation methods mentioned "
+"above (:meth:`MetricFrame.group_min`, :meth:`MetricFrame.group_max`, "
+":meth:`MetricFrame.difference`, and :meth:`MetricFrame.ratio`). This "
+"takes an underlying metric function, the name of the desired "
+"transformation, and optionally a list of parameter names which should be "
+"treated as sample aligned parameters (such as `sample_weight`). Other "
+"parameters will be passed to the underlying metric function normally "
+"(unlike :class:`MetricFrame` where :func:`functools.partial` must be "
+"used, as noted above). The result is a function which builds the "
+":class:`MetricFrame` internally and performs the requested aggregation. "
+"For example:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:269
+msgid ""
+"We use :func:`fairlearn.metrics.make_derived_metric` to manufacture a "
+"number of such functions which will be commonly used:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:273
+msgid "Base metric"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:273
+msgid ":code:`group_min`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:273
+msgid ":code:`group_max`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:273
+msgid ":code:`difference`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:273
+msgid ":code:`ratio`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:275
+msgid ":func:`.false_negative_rate`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:275 ../../user_guide/assessment.rst:276
+#: ../../user_guide/assessment.rst:277 ../../user_guide/assessment.rst:278
+#: ../../user_guide/assessment.rst:279 ../../user_guide/assessment.rst:280
+#: ../../user_guide/assessment.rst:281 ../../user_guide/assessment.rst:282
+#: ../../user_guide/assessment.rst:283 ../../user_guide/assessment.rst:284
+#: ../../user_guide/assessment.rst:285 ../../user_guide/assessment.rst:286
+#: ../../user_guide/assessment.rst:287 ../../user_guide/assessment.rst:288
+#: ../../user_guide/assessment.rst:289 ../../user_guide/assessment.rst:290
+msgid "."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:275 ../../user_guide/assessment.rst:276
+#: ../../user_guide/assessment.rst:277 ../../user_guide/assessment.rst:278
+#: ../../user_guide/assessment.rst:279 ../../user_guide/assessment.rst:280
+#: ../../user_guide/assessment.rst:281 ../../user_guide/assessment.rst:282
+#: ../../user_guide/assessment.rst:283 ../../user_guide/assessment.rst:284
+#: ../../user_guide/assessment.rst:285 ../../user_guide/assessment.rst:286
+#: ../../user_guide/assessment.rst:287 ../../user_guide/assessment.rst:288
+#: ../../user_guide/assessment.rst:289 ../../user_guide/assessment.rst:290
+msgid "Y"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:276
+msgid ":func:`.false_positive_rate`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:277
+msgid ":func:`.selection_rate`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:278
+msgid ":func:`.true_negative_rate`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:279
+msgid ":func:`.true_positive_rate`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:280
+msgid ":func:`sklearn.metrics.accuracy_score`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:281
+msgid ":func:`sklearn.metrics.balanced_accuracy_score`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:282
+msgid ":func:`sklearn.metrics.f1_score`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:283
+msgid ":func:`sklearn.metrics.log_loss`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:284
+msgid ":func:`sklearn.metrics.mean_absolute_error`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:285
+msgid ":func:`sklearn.metrics.mean_squared_error`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:286
+msgid ":func:`sklearn.metrics.precision_score`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:287
+msgid ":func:`sklearn.metrics.r2_score`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:288
+msgid ":func:`sklearn.metrics.recall_score`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:289
+msgid ":func:`sklearn.metrics.roc_auc_score`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:290
+msgid ":func:`sklearn.metrics.zero_one_loss`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:293
+msgid ""
+"The names of the generated functions are of the form "
+":code:`fairlearn.metrics.<base_metric>_<transformation>`. For example "
+":code:`fairlearn.metrics.accuracy_score_difference` and "
+":code:`fairlearn.metrics.precision_score_group_min`."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:301
+msgid "Control features for grouped metrics"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:303
+msgid ""
+"Control features (sometimes called 'conditional' features) enable more "
+"detailed fairness insights by providing a further means of splitting the "
+"data into subgroups. When the data are split into subgroups, control "
+"features (if provided) act similarly to sensitive features. However, the "
+"'overall' value for the metric is now computed for each subgroup of the "
+"control feature(s). Similarly, the aggregation functions (such as "
+":code:`MetricFrame.group_max`) are performed for each subgroup in the "
+"conditional feature(s), rather than across them (as happens with the "
+"sensitive features)."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:314
+msgid ""
+"Control features are useful for cases where there is some expected "
+"variation with a feature, so we need to compute disparities while "
+"controlling for that feature. For example, in a loan scenario we would "
+"expect people of differing incomes to be approved at different rates, but"
+" within each income band we would still want to measure disparities "
+"between different sensitive features. However, it should be borne in mind"
+" that due to historic discrimination, the income band might be correlated"
+" with various sensitive features. Because of this, control features "
+"should be used with particular caution."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:323
+msgid ""
+"The :class:`MetricFrame` constructor allows us to specify control "
+"features in a manner similar to sensitive features, using a "
+":code:`conditional_features=` parameter:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:372
+msgid ""
+"Note how the :attr:`MetricFrame.overall` property is stratified based on "
+"the supplied control feature. The :attr:`MetricFrame.by_group` property "
+"allows us to see disparities between the groups in the sensitive feature "
+"for each group in the control feature. When displayed like this, "
+":attr:`MetricFrame.by_group` looks similar to how it would if we had "
+"specified two sensitive features (although the control features will "
+"always be at the top level of the hierarchy)."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:380
+msgid "With the :class:`MetricFrame` computed, we can perform aggregations:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:398
+msgid ""
+"In each case, rather than a single scalar, we receive one result for each"
+" subgroup identified by the conditional feature. The call "
+":code:`metric_c_f.group_max()` call shows the maximum value of the metric"
+" across the subgroups of the sensitive feature within each value of the "
+"control feature. Similarly, "
+":code:`metric_c_f.difference(method='between_groups')` call shows the "
+"maximum difference between the subgroups of the sensitive feature within "
+"each value of the control feature. For more examples, please see the "
+":ref:`sphx_glr_auto_examples_plot_new_metrics.py` notebook in the "
+":ref:`examples`."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:412
+msgid "Plotting grouped metrics"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:414
+msgid ""
+"The simplest way to visualize grouped metrics from the "
+":class:`MetricFrame` is to take advantage of the inherent plotting "
+"capabilities of :class:`pandas.DataFrame`:"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:427
+msgid "It is possible to customize the plots. Here are some common examples."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:430
+msgid "Customize Plots: :code:`ylim`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:431
+msgid ""
+"The y-axis range is automatically set, which can be misleading, therefore"
+" it is sometimes useful to set the `ylim` argument to define the yaxis "
+"range."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:444
+msgid "Customize Plots: :code:`colormap`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:445
+msgid ""
+"To change the color scheme, we can use the `colormap` argument. A list of"
+" colorschemes can be found `here "
+"<https://matplotlib.org/stable/tutorials/colors/colormaps.html>`_."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:457
+msgid "Customize Plots: :code:`kind`"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:458
+msgid ""
+"There are different types of charts (e.g. pie, bar, line) which can be "
+"defined by the `kind` argument. Here is an example of a pie chart."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:468
+msgid ""
+"There are many other customizations that can be done. More information "
+"can be found in :meth:`pandas.DataFrame.plot`."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:474
+msgid "Fairlearn dashboard"
+msgstr ""
+
+#: ../../user_guide/assessment.rst:476
+msgid ""
+"The Fairlearn dashboard was a Jupyter notebook widget for assessing how a"
+" model's predictions impact different groups (e.g., different "
+"ethnicities), and also for comparing multiple models along different "
+"fairness and performance metrics."
+msgstr ""
+
+#: ../../user_guide/assessment.rst:483
+msgid ""
+"The :code:`FairlearnDashboard` is no longer being developed as part of "
+"Fairlearn. For more information on how to use it refer to "
+"`https://github.com/microsoft/responsible-ai-widgets "
+"<https://github.com/microsoft/responsible-ai-widgets>`_. Fairlearn "
+"provides some of the existing functionality through "
+":code:`matplotlib`-based visualizations. Refer to the :ref:`plot` "
+"section."
+msgstr ""
+

@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../auto_examples/plot_grid_search_census.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_auto_examples_plot_grid_search_census.py>` to download"
+" the full example code"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:23
+msgid "GridSearch with Census Data"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:27
+msgid ""
+"This notebook shows how to use Fairlearn to generate predictors for the "
+"Census dataset. This dataset is a classification problem - given a range "
+"of data about 32,000 individuals, predict whether their annual income is "
+"above or below fifty thousand dollars per year."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:31
+msgid ""
+"For the purposes of this notebook, we shall treat this as a loan decision"
+" problem. We will pretend that the label indicates whether or not each "
+"individual repaid a loan in the past. We will use the data to train a "
+"predictor to predict whether previously unseen individuals will repay a "
+"loan or not. The assumption is that the model predictions are used to "
+"decide whether an individual should be offered a loan."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:39
+msgid ""
+"We will first train a fairness-unaware predictor and show that it leads "
+"to unfair decisions under a specific notion of fairness called "
+"*demographic parity*. We then mitigate unfairness by applying the "
+":code:`GridSearch` algorithm from the Fairlearn package."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:47
+msgid "Load and preprocess the data set"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:48
+msgid ""
+"We download the data set using `fetch_adult` function in "
+"`fairlearn.datasets`. We start by importing the various modules we're "
+"going to use:"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:75
+msgid ""
+"We can now load and inspect the data by using the `fairlearn.datasets` "
+"module:"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:328
+msgid ""
+"We are going to treat the sex of each individual as a sensitive feature "
+"(where 0 indicates female and 1 indicates male), and in this particular "
+"case we are going separate this feature out and drop it from the main "
+"data. We then perform some standard data preprocessing steps to convert "
+"the data into a format suitable for the ML algorithms"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:360
+msgid "Finally, we split the data into training and test sets:"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:390
+msgid "Training a fairness-unaware predictor"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:392
+msgid ""
+"To show the effect of Fairlearn we will first train a standard ML "
+"predictor that does not incorporate fairness. For speed of demonstration,"
+" we use the simple :class:`sklearn.linear_model.LogisticRegression` "
+"class:"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:412
+#: ../../auto_examples/plot_grid_search_census.rst:452
+#: ../../auto_examples/plot_grid_search_census.rst:634
+msgid "Out:"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:423
+msgid "We can start to assess the predictor's fairness using the `MetricFrame`:"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:474
+msgid ""
+"Looking at the disparity in accuracy, we see that males have an error "
+"about three times greater than the females. More interesting is the "
+"disparity in opportunity - males are offered loans at three times the "
+"rate of females."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:479
+msgid ""
+"Despite the fact that we removed the feature from the training data, our "
+"predictor still discriminates based on sex. This demonstrates that simply"
+" ignoring a sensitive feature when fitting a predictor rarely eliminates "
+"unfairness. There will generally be enough other features correlated with"
+" the removed feature to lead to disparate impact."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:489
+msgid "Mitigation with GridSearch"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:491
+msgid ""
+"The :class:`fairlearn.reductions.GridSearch` class implements a "
+"simplified version of the exponentiated gradient reduction of `Agarwal et"
+" al. 2018 <https://arxiv.org/abs/1803.02453>`_. The user supplies a "
+"standard ML estimator, which is treated as a blackbox. `GridSearch` works"
+" by generating a sequence of relabellings and reweightings, and trains a "
+"predictor for each."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:497
+msgid ""
+"For this example, we specify demographic parity (on the sensitive feature"
+" of sex) as the fairness metric. Demographic parity requires that "
+"individuals are offered the opportunity (are approved for a loan in this "
+"example) independent of membership in the sensitive class (i.e., females "
+"and males should be offered loans at the same rate). We are using this "
+"metric for the sake of simplicity; in general, the appropriate fairness "
+"metric will not be obvious."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:523
+msgid ""
+"Our algorithms provide :code:`fit()` and :code:`predict()` methods, so "
+"they behave in a similar manner to other ML packages in Python. We do "
+"however have to specify two extra arguments to :code:`fit()` - the column"
+" of sensitive feature labels, and also the number of predictors to "
+"generate in our sweep."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:528
+msgid ""
+"After :code:`fit()` completes, we extract the full set of predictors from"
+" the :class:`fairlearn.reductions.GridSearch` object."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:550
+msgid ""
+"We could plot performance and fairness metrics of these predictors now. "
+"However, the plot would be somewhat confusing due to the number of "
+"models. In this case, we are going to remove the predictors which are "
+"dominated in the error-disparity space by others from the sweep (note "
+"that the disparity will only be calculated for the sensitive feature; "
+"other potentially sensitive features will not be mitigated). In general, "
+"one might not want to do this, since there may be other considerations "
+"beyond the strict optimization of error and disparity (of the given "
+"sensitive feature)."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:593
+msgid ""
+"Finally, we can evaluate the dominant models along with the unmitigated "
+"model."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:645
+msgid ""
+"We see a Pareto front forming - the set of predictors which represent "
+"optimal tradeoffs between accuracy and disparity in predictions. In the "
+"ideal case, we would have a predictor at (1,0) - perfectly accurate and "
+"without any unfairness under demographic parity (with respect to the "
+"sensitive feature \"sex\"). The Pareto front represents the closest we "
+"can come to this ideal based on our data and choice of estimator. Note "
+"the range of the axes - the disparity axis covers more values than the "
+"accuracy, so we can reduce disparity substantially for a small loss in "
+"accuracy."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:654
+msgid ""
+"In a real example, we would pick the model which represented the best "
+"trade-off between accuracy and disparity given the relevant business "
+"constraints."
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:660
+msgid "**Total running time of the script:** ( 4 minutes  10.474 seconds)"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:675
+msgid ""
+":download:`Download Python source code: plot_grid_search_census.py "
+"<plot_grid_search_census.py>`"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:681
+msgid ""
+":download:`Download Jupyter notebook: plot_grid_search_census.ipynb "
+"<plot_grid_search_census.ipynb>`"
+msgstr ""
+
+#: ../../auto_examples/plot_grid_search_census.rst:688
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+

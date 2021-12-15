@@ -1,0 +1,812 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../api_reference/fairlearn.reductions.rst:2
+msgid "fairlearn\\.reductions package"
+msgstr ""
+
+#: fairlearn.reductions:1 of
+msgid ""
+"This module contains algorithms implementing the reductions approach to "
+"disparity mitigation."
+msgstr ""
+
+#: fairlearn.reductions:3 of
+msgid ""
+"In this approach, disparity constraints are cast as Lagrange multipliers,"
+" which cause the reweighting and relabelling of the input data. This "
+"*reduces* the problem back to standard machine learning training."
+msgstr ""
+
+#: fairlearn.reductions.AbsoluteLoss:1 fairlearn.reductions.Moment:1
+#: fairlearn.reductions._moments.bounded_group_loss.SquareLoss:1 of
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: fairlearn.reductions.AbsoluteLoss:1 of
+msgid "Class to evaluate absolute loss."
+msgstr ""
+
+#: fairlearn.reductions._moments.bounded_group_loss.AbsoluteLoss.eval:1 of
+msgid "Evaluate the absolute loss for the given set of true and predicted values."
+msgstr ""
+
+#: fairlearn.reductions._moments.bounded_group_loss.BoundedGroupLoss:1 of
+msgid "Bases: :py:class:`fairlearn.reductions.ConditionalLossMoment`"
+msgstr ""
+
+#: fairlearn.reductions._moments.bounded_group_loss.BoundedGroupLoss:1 of
+msgid "Moment for constraining the worst-case loss by a group."
+msgstr ""
+
+#: fairlearn.reductions._moments.bounded_group_loss.BoundedGroupLoss:3 of
+msgid "For more information refer to the :ref:`user guide <bounded_group_loss>`."
+msgstr ""
+
+#: fairlearn.reductions.ClassificationMoment:1
+#: fairlearn.reductions.LossMoment:1 of
+msgid "Bases: :py:class:`fairlearn.reductions.Moment`"
+msgstr ""
+
+#: fairlearn.reductions.ClassificationMoment:1 of
+msgid "Moment that can be expressed as weighted classification error."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.DemographicParity:1
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:1
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity:1
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:1
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:1 of
+msgid "Bases: :py:class:`fairlearn.reductions.UtilityParity`"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.DemographicParity:1 of
+msgid "Implementation of demographic parity as a moment."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.DemographicParity:3 of
+msgid "A classifier :math:`h(X)` satisfies demographic parity if"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.DemographicParity:5 of
+msgid ""
+"P[h(X) = 1 | A = a] = P[h(X) = 1] \\; \\forall a\n"
+"\n"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.DemographicParity:8 of
+msgid ""
+"This implementation of :class:`UtilityParity` defines a single event, "
+"`all`. Consequently, the `prob_event` :class:`pandas:pandas.Series` will "
+"only have a single entry, which will be equal to 1. Similarly, the "
+"`index` property will have twice as many entries (corresponding to the "
+"Lagrange multipliers for positive and negative constraints) as there are "
+"unique values for the sensitive feature. The :meth:`signed_weights` "
+"method will compute the costs according to Example 3 of `Agarwal et al. "
+"(2018) <https://arxiv.org/abs/1803.02453>`_ [4]_."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.DemographicParity:18 of
+msgid ""
+"This :class:`~Moment` also supports control features, which can be used "
+"to stratify the data, with the Demographic Parity constraint applied "
+"within each stratum, but not between strata. If the control feature "
+"groups are :math:`c \\in \\mathcal{C}` then the above equation will "
+"become"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.DemographicParity:23 of
+msgid ""
+"P[h(X) = 1 | A = a, C = c] = P[h(X) = 1 | C = c] \\; \\forall a, c\n"
+"\n"
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:42
+#: fairlearn.reductions._moments.utility_parity.DemographicParity:27
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:29
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity:25
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:30
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:36
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.load_data:16
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.signed_weights:13
+#: of
+msgid "References"
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:43
+#: fairlearn.reductions._moments.utility_parity.DemographicParity:28
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:30
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity:26
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:31
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:37
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.load_data:17
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.signed_weights:14
+#: of
+msgid ""
+"A. Agarwal, A. Beygelzimer, M. Dudík, J. Langford, and H. Wallach, \"A "
+"Reductions Approach to Fair Classification,\" arXiv.org, 16-Jul-2018. "
+"[Online]. Available: https://arxiv.org/abs/1803.02453."
+msgstr ""
+
+#: fairlearn.reductions._moments.error_rate.ErrorRate.load_data:1
+#: fairlearn.reductions._moments.utility_parity.DemographicParity.load_data:1
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds.load_data:1
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity.load_data:1
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity.load_data:1
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity.load_data:1
+#: of
+msgid "Load the specified data into the object."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:1 of
+msgid "Implementation of equalized odds as a moment."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:3 of
+msgid "Adds conditioning on label compared to demographic parity, i.e."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:5 of
+msgid ""
+"P[h(X) = 1 | A = a, Y = y] = P[h(X) = 1 | Y = y] \\; \\forall a, y\n"
+"\n"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:8 of
+msgid ""
+"This implementation of :class:`UtilityParity` defines events "
+"corresponding to the unique values of the `Y` array."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:11 of
+msgid ""
+"The `prob_event` :class:`pandas:pandas.Series` will record the fraction "
+"of the samples corresponding to each unique value in the `Y` array."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:15 of
+msgid ""
+"The `index` MultiIndex will have a number of entries equal to the number "
+"of unique values for the sensitive feature, multiplied by the number of "
+"unique values of the `Y` array, multiplied by two (for the Lagrange "
+"multipliers for positive and negative constraints)."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:20 of
+msgid ""
+"With these definitions, the :meth:`signed_weights` method will calculate "
+"the costs according to Example 4 of `Agarwal et al. (2018) "
+"<https://arxiv.org/abs/1803.02453>`_ [7]_."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.EqualizedOdds:24
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity:20
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:25
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:31 of
+msgid ""
+"This :class:`~Moment` also supports control features, which can be used "
+"to stratify the data, with the constraint applied within each stratum, "
+"but not between strata."
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:1
+#: fairlearn.reductions._moments.error_rate.ErrorRate:1 of
+msgid "Bases: :py:class:`fairlearn.reductions.ClassificationMoment`"
+msgstr ""
+
+#: fairlearn.reductions._moments.error_rate.ErrorRate:1 of
+msgid "Misclassification error."
+msgstr ""
+
+#: fairlearn.reductions._moments.error_rate.ErrorRate.gamma:1 of
+msgid "Return the gamma values for the given predictor."
+msgstr ""
+
+#: fairlearn.reductions._moments.error_rate.ErrorRate.project_lambda:1 of
+msgid "Return the lambda values."
+msgstr ""
+
+#: fairlearn.reductions._moments.error_rate.ErrorRate.signed_weights:1
+#: fairlearn.reductions._moments.moment.Moment.signed_weights:1 of
+msgid "Return the signed weights."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity:1 of
+msgid "Implementation of error rate parity as a moment."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity:3 of
+msgid "A classifier :math:`h(X)` satisfies error rate parity if"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity:5 of
+msgid ""
+"P[h(X) \\ne Y | A = a] = P[h(X) \\ne Y] \\; \\forall a\n"
+"\n"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity:8 of
+msgid ""
+"This implementation of :class:`UtilityParity` defines a single event, "
+"`all`. Consequently, the `prob_event` :class:`pandas:pandas.Series` will "
+"only have a single entry, which will be equal to 1."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity:13 of
+msgid ""
+"The `index` property will have twice as many entries (corresponding to "
+"the Lagrange multipliers for positive and negative constraints) as there "
+"are unique values for the sensitive feature."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.ErrorRateParity:16 of
+msgid ""
+"The :meth:`signed_weights` method will compute the costs according to "
+"Example 3 of `Agarwal et al. (2018) <https://arxiv.org/abs/1803.02453>`_ "
+"[8]_. However, in this scenario, g = abs(h(x)-y), rather than g = h(x)"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:1
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:1 of
+msgid ""
+"Bases: :py:class:`sklearn.base.BaseEstimator`, "
+":py:class:`sklearn.base.MetaEstimatorMixin`"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:1
+#: of
+msgid ""
+"An Estimator which implements the exponentiated gradient approach to "
+"reductions."
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:3
+#: of
+msgid ""
+"The exponentiated gradient algorithm is described in detail by `Agarwal "
+"et al. (2018) <https://arxiv.org/abs/1803.02453>`_."
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.fit
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.predict
+#: fairlearn.reductions._grid_search.grid_search.GridSearch
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.fit
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.predict
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.predict_proba
+#: fairlearn.reductions._moments.moment.Moment.load_data
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.signed_weights of
+msgid "Parameters"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:6
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:6 of
+msgid ""
+"An estimator implementing methods :code:`fit(X, y, sample_weight)` and "
+":code:`predict(X)`, where `X` is the matrix of features, `y` is the "
+"vector of labels (binary classification) or continuous values "
+"(regression), and `sample_weight` is a vector of weights. In binary "
+"classification labels `y` and predictions returned by :code:`predict(X)` "
+"are either 0 or 1. In regression values `y` and predictions are "
+"continuous."
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:14
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:14 of
+msgid "The disparity constraints expressed as moments"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:16
+#: of
+msgid ""
+"Allowed fairness constraint violation; the solution is guaranteed to have"
+" the error within :code:`2*best_gap` of the best error under constraint "
+"`eps`; the constraint violation is at most :code:`2*(eps+best_gap)`"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:21
+#: of
+msgid "Maximum number of iterations"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:23
+#: of
+msgid ""
+"Convergence threshold for the duality gap, corresponding to a "
+"conservative automatic setting based on the statistical uncertainty in "
+"measuring classification error"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:27
+#: of
+msgid "Initial setting of the learning rate"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:29
+#: of
+msgid ""
+"if True each step of exponentiated gradient is followed by the saddle "
+"point optimization over the convex hull of classifiers returned so far; "
+"default True"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient:33
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:37 of
+msgid ""
+"Name of the argument to `estimator.fit()` which supplies the sample "
+"weights (defaults to `sample_weight`)"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.fit:1
+#: of
+msgid "Return a fair classifier under specified fairness constraints."
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.fit:3
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.predict:18
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.predict:6
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.predict_proba:6 of
+msgid "Feature data"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.fit:5
+#: of
+msgid "Label vector"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.predict:1
+#: of
+msgid "Provide predictions for the given input data."
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.predict:3
+#: of
+msgid ""
+"Predictions are randomized, i.e., repeatedly calling `predict` with the "
+"same feature data may yield different output. This non-deterministic "
+"behavior is intended and stems from the nature of the exponentiated "
+"gradient algorithm."
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.predict:9
+#: of
+msgid "Notes"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.predict:10
+#: of
+msgid ""
+"A fitted ExponentiatedGradient has an attribute `predictors_`, an array "
+"of predictors, and an attribute `weights_`, an array of non-negative "
+"floats of the same length. The prediction on each data point in `X` is "
+"obtained by first picking a random predictor according to the "
+"probabilities in `weights_` and then applying it. Different predictors "
+"can be chosen on different data points."
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.predict:20
+#: of
+msgid ""
+"Controls random numbers used for randomized predictions. Pass an int for "
+"reproducible output across multiple function calls."
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.predict
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.bound of
+msgid "Returns"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.predict:24
+#: of
+msgid ""
+"The prediction. If `X` represents the data for a single example the "
+"result will be a scalar. Otherwise the result will be a vector"
+msgstr ""
+
+#: fairlearn.reductions._exponentiated_gradient.exponentiated_gradient.ExponentiatedGradient.predict
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.bound of
+msgid "Return type"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:1 of
+msgid "Implementation of false positive rate parity as a moment."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:3 of
+msgid "Adds conditioning on label `Y=0` compared to demographic parity, i.e.,"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:5 of
+msgid ""
+"P[h(X) = 1 | A = a, Y = 0] = P[h(X) = 1 | Y = 0] \\; \\forall a\n"
+"\n"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:8 of
+msgid ""
+"This implementation of :class:`UtilityParity` defines the event "
+"corresponding to `Y=0`."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:11 of
+msgid ""
+"The `prob_event` :class:`pandas:pandas.DataFrame` will record the "
+"fraction of the samples corresponding to `Y = 0` in the `Y` array."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:14 of
+msgid ""
+"The `index` MultiIndex will have a number of entries equal to the number "
+"of unique values of the sensitive feature, multiplied by the number of "
+"unique non-NaN values of the constructed `event` array, whose entries are"
+" either NaN or `label=0` (so only one unique non-NaN value), multiplied "
+"by two (for the Lagrange multipliers for positive and negative "
+"constraints)."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.FalsePositiveRateParity:20 of
+msgid ""
+"With these definitions, the :meth:`signed_weights` method will calculate "
+"the costs for `Y=0` as they are calculated in Example 4 of `Agarwal et "
+"al. (2018) <https://arxiv.org/abs/1803.02453>`_, but will use the weights"
+" equal to zero for `Y=1` [6]_."
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:1 of
+msgid "Estimator to perform a grid search given a blackbox estimator algorithm."
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:3 of
+msgid ""
+"The approach used is taken from section 3.4 of `Agarwal et al. (2018) "
+"<https://arxiv.org/abs/1803.02453>`_ [1]_."
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:16 of
+msgid ""
+"Specifies the procedure for selecting the best model found by the grid "
+"search. At the present time, the only valid value is "
+"\"tradeoff_optimization\" which minimizes a weighted sum of the error "
+"rate and constraint violation."
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:21 of
+msgid ""
+"When the `selection_rule` is \"tradeoff_optimization\" this specifies the"
+" relative weight put on the constraint violation when selecting the best "
+"model. The weight placed on the error rate will be "
+":code:`1-constraint_weight`"
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:26 of
+msgid "The number of Lagrange multipliers to generate in the grid"
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:28 of
+msgid ""
+"The largest Lagrange multiplier to generate. The grid will contain values"
+" distributed between :code:`-grid_limit` and :code:`grid_limit` by "
+"default"
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:32 of
+msgid ""
+"Shifts the grid of Lagrangian multiplier by that value. It is '0' by "
+"default"
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch:35 of
+msgid ""
+"Instead of supplying a size and limit for the grid, users may specify the"
+" exact set of Lagrange multipliers they desire using this argument."
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.fit:1 of
+msgid "Run the grid search."
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.fit:3 of
+msgid ""
+"This will result in multiple copies of the estimator being made, and the "
+":code:`fit(X)` method of each one called."
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.fit:7 of
+msgid "The feature matrix"
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.fit:10
+#: fairlearn.reductions._moments.moment.Moment.load_data:6 of
+msgid "The label vector"
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.fit:13 of
+msgid ""
+"A (currently) required keyword argument listing the feature used by the "
+"constraints object"
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.predict:1 of
+msgid "Provide a prediction using the best model found by the grid search."
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.predict:3 of
+msgid ""
+"This dispatches `X` to the :code:`predict(X)` method of the selected "
+"estimator, and hence the return type is dependent on that method."
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.predict_proba:1 of
+msgid ""
+"Provide the result of :code:`predict_proba` from the best model found by "
+"the grid search."
+msgstr ""
+
+#: fairlearn.reductions._grid_search.grid_search.GridSearch.predict_proba:3 of
+msgid ""
+"The underlying estimator must support :code:`predict_proba(X)` for this "
+"to work. The return type is determined by this method."
+msgstr ""
+
+#: fairlearn.reductions.LossMoment:1 of
+msgid "Moment that can be expressed as weighted loss."
+msgstr ""
+
+#: fairlearn.reductions.Moment:1 of
+msgid "Generic moment."
+msgstr ""
+
+#: fairlearn.reductions.Moment:3 of
+msgid ""
+"Our implementations of the reductions approach to fairness described in "
+"`Agarwal et al. (2018) <https://arxiv.org/abs/1803.02453>`_ make use of "
+":class:`Moment` objects to describe the disparity constraints imposed on "
+"the solution. This is an abstract class for all such objects."
+msgstr ""
+
+#: fairlearn.reductions._moments.moment.Moment.bound:1 of
+msgid "Return vector of fairness bound constraint the length of gamma."
+msgstr ""
+
+#: fairlearn.reductions._moments.moment.Moment.gamma:1
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.gamma:1 of
+msgid ""
+"Calculate the degree to which constraints are currently violated by the "
+"predictor."
+msgstr ""
+
+#: fairlearn.reductions._moments.moment.Moment.load_data:1 of
+msgid "Load a set of data for use by this object."
+msgstr ""
+
+#: fairlearn.reductions._moments.moment.Moment.load_data:3 of
+msgid "The feature array"
+msgstr ""
+
+#: fairlearn.reductions._moments.moment.Moment.load_data:9 of
+msgid "The sensitive feature vector (default None)"
+msgstr ""
+
+#: fairlearn.reductions._moments.moment.Moment.project_lambda:1
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.project_lambda:1
+#: of
+msgid "Return the projected lambda values."
+msgstr ""
+
+#: fairlearn.reductions.Moment.total_samples:1 of
+msgid "Return the number of samples in the data."
+msgstr ""
+
+#: fairlearn.reductions._moments.bounded_group_loss.SquareLoss:1 of
+msgid "Class to evaluate the square loss."
+msgstr ""
+
+#: fairlearn.reductions._moments.bounded_group_loss.SquareLoss.eval:1 of
+msgid "Evaluate the square loss for the given set of true and predicted values."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:1 of
+msgid "Implementation of true positive rate parity as a moment."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:8 of
+msgid "Adds conditioning on label `Y=1` compared to demographic parity, i.e.,"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:10 of
+msgid ""
+"P[h(X) = 1 | A = a, Y = 1] = P[h(X) = 1 | Y = 1] \\; \\forall a\n"
+"\n"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:13 of
+msgid ""
+"This implementation of :class:`UtilityParity` defines the event "
+"corresponding to `Y=1`."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:16 of
+msgid ""
+"The `prob_event` :class:`pandas:pandas.DataFrame` will record the "
+"fraction of the samples corresponding to `Y = 1` in the `Y` array."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:19 of
+msgid ""
+"The `index` MultiIndex will have a number of entries equal to the number "
+"of unique values of the sensitive feature, multiplied by the number of "
+"unique non-NaN values of the constructed `event` array, whose entries are"
+" either NaN or `label=1` (so only one unique non-NaN value), multiplied "
+"by two (for the Lagrange multipliers for positive and negative "
+"constraints)."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.TruePositiveRateParity:26 of
+msgid ""
+"With these definitions, the :meth:`signed_weights` method will calculate "
+"the costs for `Y=1` as they are calculated in Example 4 of `Agarwal et "
+"al. (2018) <https://arxiv.org/abs/1803.02453>`, but will use the weights "
+"equal to zero for `Y=0` [5]_."
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:1 of
+msgid "A generic moment for parity in utilities (or costs) under classification."
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:3 of
+msgid ""
+"This serves as the base class for :class:`DemographicParity`, "
+":class:`EqualizedOdds`, and others. All subclasses can be used as "
+"difference-based constraints or ratio-based constraints. Refer to the "
+":ref:`user guide <constraints_binary_classification>` for more "
+"information and example usage."
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:9 of
+msgid ""
+"Constraints compare the group-level mean utility for each group with the "
+"overall mean utility (unless further events are specified, e.g., in "
+"equalized odds). Constraint violation for difference-based constraints "
+"starts if the difference between a group and the overall population with "
+"regard to a utility exceeds `difference_bound`. For ratio-based "
+"constraints, the ratio between the group-level and overall mean utility "
+"needs to be bounded between `ratio_bound` and its inverse (plus an "
+"additional additive `ratio_bound_slack`)."
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:19 of
+msgid ""
+"The `index` field is a :class:`pandas:pandas.MultiIndex` corresponding to"
+" the constraint IDs. It is an index of various DataFrame and Series "
+"objects that are either required as arguments or returned by several of "
+"the methods of the `UtilityParity` class. It is the Cartesian product of:"
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:25 of
+msgid "The unique events defining the particular moment object"
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:26 of
+msgid "The unique values of the sensitive feature"
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:27 of
+msgid ""
+"The characters `+` and `-`, corresponding to the Lagrange multipliers for"
+" positive and negative violations of the constraint"
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:30 of
+msgid ""
+"The constraints' difference bound for constraints that are expressed as "
+"differences, also referred to as :math:`\\\\epsilon` in documentation. If"
+" `ratio_bound` is used then `difference_bound` needs to be None. If "
+"neither `ratio_bound` nor `difference_bound` are set then a default "
+"difference bound of 0.01 is used for backwards compatibility. Default "
+"None."
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:37 of
+msgid ""
+"The constraints' ratio bound for constraints that are expressed as "
+"ratios. The specified value needs to be in (0,1]. If `difference_bound` "
+"is used then `ratio_bound` needs to be None. Default None."
+msgstr ""
+
+#: fairlearn.reductions.UtilityParity:42 of
+msgid ""
+"The constraints' ratio bound slack for constraints that are expressed as "
+"ratios, also referred to as :math:`\\\\epsilon` in documentation. "
+"`ratio_bound_slack` is ignored if `ratio_bound` is not specified. Default"
+" 0.0"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.bound:1 of
+msgid "Return bound vector."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.bound:3 of
+msgid "a vector of bound values corresponding to all constraints"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.default_objective:1
+#: of
+msgid "Return the default objective for moments of this kind."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.load_data:1 of
+msgid "Load the specified data into this object."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.load_data:3 of
+msgid "This adds a column `event` to the `tags` field."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.load_data:5 of
+msgid ""
+"The `utilities` is a 2-d array which corresponds to g(X,A,Y,h(X)) as "
+"mentioned in the paper `Agarwal et al. (2018) "
+"<https://arxiv.org/abs/1803.02453>` [2]_. The `utilities` defaults to "
+"h(X), i.e. [0, 1] for each X_i. The first column is G^0 and the second is"
+" G^1. Assumes binary classification with labels 0/1."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.load_data:12 of
+msgid ""
+"utilities = [g(X,A,Y,h(X)=0), g(X,A,Y,h(X)=1)]\n"
+"\n"
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.project_lambda:3
+#: of
+msgid ""
+"i.e., returns lambda which is guaranteed to lead to the same or higher "
+"value of the Lagrangian compared with lambda_vec for all possible choices"
+" of the classifier, h."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.signed_weights:1
+#: of
+msgid "Compute the signed weights."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.signed_weights:3
+#: of
+msgid ""
+"Uses the equations for :math:`C_i^0` and :math:`C_i^1` as defined in "
+"Section 3.2 of `Agarwal et al. (2018) "
+"<https://arxiv.org/abs/1803.02453>`_ in the 'best response of the "
+"Q-player' subsection to compute the signed weights to be applied to the "
+"data by the next call to the underlying estimator [3]_."
+msgstr ""
+
+#: fairlearn.reductions._moments.utility_parity.UtilityParity.signed_weights:9
+#: of
+msgid "The vector of Lagrange multipliers indexed by `index`"
+msgstr ""
+
+#: fairlearn.reductions._moments.bounded_group_loss.ZeroOneLoss:1 of
+msgid "Bases: :py:class:`fairlearn.reductions.AbsoluteLoss`"
+msgstr ""
+
+#: fairlearn.reductions._moments.bounded_group_loss.ZeroOneLoss:1 of
+msgid "Class to evaluate a zero-one loss."
+msgstr ""
+

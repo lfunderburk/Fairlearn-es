@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../contributor_guide/index.rst:4
+msgid "Contributor Guide"
+msgstr ""
+
+#: ../../contributor_guide/index.rst:6
+msgid ""
+"This project welcomes contributions and suggestions. Check the sections "
+"below to find out how to connect to our community of users and "
+"developers. Also make sure to read and respect our community's "
+":ref:`code_of_conduct`. The contribution guide explains how to structure "
+"your contributions. Please :ref:`reach out <communication>` if you "
+"encouter any issues."
+msgstr ""
+
+#: ../../contributor_guide/index.rst:28
+msgid "Real-time communication"
+msgstr ""
+
+#: ../../contributor_guide/index.rst:30
+msgid ""
+"For real time communication please join us on `Gitter "
+"<https://gitter.im/fairlearn/community>`_. All are welcome!"
+msgstr ""
+
+#: ../../contributor_guide/index.rst:34
+msgid ""
+"To report bugs, request features, or ask usage questions please use the "
+"`appropriate channels as outlined on GitHub "
+"<https://github.com/fairlearn/fairlearn/issues/new/choose>`_."
+msgstr ""
+
+#: ../../contributor_guide/index.rst:40
+msgid "Community calls"
+msgstr ""
+
+#: ../../contributor_guide/index.rst:42
+msgid ""
+"We have a weekly community call every Thursday at 11am US Eastern time "
+"(ET). Check what this means in your time zone with `Time.is "
+"<https://time.is/New_York>`_. All are welcome! Please reach out via "
+"`Gitter <https://gitter.im/fairlearn/community>`_ and we will forward the"
+" invitation to you. We keep notes from each meeting in our `HackMD "
+"<https://hackmd.io/QcJ8WBAbQTq6iOgoi0JT4g>`_."
+msgstr ""
+

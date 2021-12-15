@@ -1,0 +1,451 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: 2021-12-15 13:15-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: ../../about/index.rst:4
+msgid "About Us"
+msgstr "Sobre nosotros"
+
+#: ../../about/index.rst:9
+msgid "Mission"
+msgstr "Misión"
+
+#: ../../about/index.rst:11
+msgid ""
+"Fairlearn is an open-source, community-driven project to help data "
+"scientists improve fairness of AI systems."
+msgstr ""
+"Fairlearn es un proyecto de código abierto impulsado por la comunidad para "
+"ayudar a los científicos de datos a mejorar la equidad de los sistemas de "
+"IA."
+
+#: ../../about/index.rst:14
+msgid "The project aspires to include:"
+msgstr "El proyecto aspira a incluir:"
+
+#: ../../about/index.rst:16
+msgid ""
+"A Python library for fairness assessment and improvement (fairness "
+"metrics, mitigation algorithms, plotting, etc.)"
+msgstr ""
+"Una biblioteca de Python para la evaluación y mejora de la equidad "
+"(métricas de equidad, algoritmos de mitigación, uso de gráficos, etc.)"
+
+#: ../../about/index.rst:18
+msgid ""
+"Educational resources covering organizational and technical processes for "
+"unfairness mitigation (comprehensive user guide, detailed case studies, "
+"Jupyter notebooks, white papers, etc.)"
+msgstr ""
+"Recursos educativos que cubren procesos organizacionales y técnicos para "
+"la mitigación de la injusticia (guía completa del usuario, estudios de "
+"casos detallados, cuadernos de Jupyter, libros blancos, etc.)"
+
+#: ../../about/index.rst:22
+msgid ""
+"Development of Fairlearn is firmly grounded in the understanding that "
+"fairness in AI systems is a sociotechnical challenge. Because there are "
+"many complex sources of unfairness --- some societal and some technical "
+"--- it is not possible to fully \"debias\" a system or to guarantee "
+"fairness. Our goal is to enable humans to assess fairness-related harms, "
+"review the impacts of different mitigation strategies and then make trade-"
+"offs appropriate to their scenario."
+msgstr ""
+"El desarrollo de Fairlearn se basa firmemente en el entendimiento de que "
+"la equidad en los sistemas de IA es un desafío sociotécnico. Debido a que "
+"hay muchas fuentes complejas de injusticia --- algunas --- sociales y "
+"algunas técnicas, no es posible remover el prejuicio completamente un "
+"sistema o garantizar la equidad. Nuestro objetivo es permitir que los "
+"humanos evalúen los daños relacionados con la equidad, revisen los "
+"impactos de las diferentes estrategias de mitigación y luego hagan "
+"concesiones apropiadas para su escenario."
+
+#: ../../about/index.rst:31
+msgid ""
+"Fairlearn is a community-driven open source project! The development and "
+"growth of Fairlearn are guided by the belief that meaningful progress "
+"toward fairer AI systems requires input from a breadth of perspectives, "
+"ranging from data scientists, developers, and business decision makers to "
+"the people whose lives may be affected by the predictions of AI systems."
+msgstr ""
+"¡Fairlearn es un proyecto de código abierto impulsado por la comunidad! El "
+"desarrollo y el crecimiento de Fairlearn están guiados por la creencia de "
+"que el progreso significativo hacia sistemas de IA más justos requiere "
+"aportes de una amplia gama de perspectivas, que van desde científicos de "
+"datos, desarrolladores y tomadores de decisiones comerciales hasta las "
+"personas cuyas vidas pueden verse afectadas por las predicciones de los "
+"sistemas de IA."
+
+#: ../../about/index.rst:41
+msgid "Code of conduct"
+msgstr "Código de conducta"
+
+#: ../../about/index.rst:43
+msgid ""
+"Fairlearn follows the `Fairlearn Organization's Code of Conduct <https://"
+"github.com/fairlearn/governance/blob/main/code-of-conduct.md>`_."
+msgstr ""
+"Fairlear sigue el `Código de Conducta de la Organización de "
+"Fairlearn<https://github.com/fairlearn/governance/blob/main/code-of-"
+"conduct.md>`_."
+
+#: ../../about/index.rst:49
+msgid "Project focus areas"
+msgstr "Áreas de enfoque del proyecto"
+
+#: ../../about/index.rst:51
+msgid "*Last update: May 16, 2021*"
+msgstr "* Última actualización: 16 de mayo de 2021 *"
+
+#: ../../about/index.rst:53
+msgid ""
+"As an open-source project, Fairlearn strives to incorporate the best of "
+"research and practice. AI is a rapidly evolving field, and fairness in AI "
+"is all the more so. We therefore encourage researchers, practitioners, and "
+"other stakeholders to contribute fairness metrics and assessment tools, "
+"unfairness mitigation algorithms, case studies and other educational "
+"materials to Fairlearn as we experiment, learn, and evolve the project "
+"together."
+msgstr ""
+"Como proyecto de código abierto, Fairlearn se esfuerza por incorporar lo "
+"mejor de la investigación y la práctica. La IA es un campo en rápida "
+"evolución, y la justicia en la IA lo es aún más. Por lo tanto, alentamos a "
+"los investigadores, profesionales y a aquellos que estén interesades a "
+"contribuir con métricas de equidad y herramientas de evaluación, "
+"algoritmos de mitigación de la injusticia, estudios de casos y otros "
+"materiales educativos a Fairlearn mientras experimentamos, aprendemos y "
+"desarrollamos el proyecto juntos."
+
+#: ../../about/index.rst:61
+#, fuzzy
+msgid ""
+"Below we list the key areas that we prioritize in the short and medium "
+"term, but we are happy to consider other directions if they are aligned "
+"with the mission of Fairlearn and there is enough commitment from the "
+"contributors. If you want to get involved, please :ref:`reach out "
+"<communication>`. For concrete opportunities and work in progress please "
+"review our `issues <https://github.com/fairlearn/fairlearn/issues>`_."
+msgstr ""
+"A continuación, enumeramos las áreas clave que priorizamos a corto y "
+"mediano plazo, pero nos complace considerar otras direcciones si están "
+"alineadas con la misión de Fairlearn y hay suficiente compromiso por parte "
+"de los colaboradores. Si desea participar, por favor : ref:`comuníquese "
+"con <communication>`. Para oportunidades concretas y trabajo en progreso, "
+"revise nuestros `problemas <https://github.com/fairlearn/fairlearn/"
+"issues>`_."
+
+#: ../../about/index.rst:69
+msgid ""
+"*Decrease adoption barriers for the current assessment and mitigation "
+"tools in Fairlearn*"
+msgstr ""
+"*Disminuir las barreras de adopción para las herramientas actuales de "
+"evaluación y mitigación en Fairlearn*"
+
+#: ../../about/index.rst:71
+#, fuzzy
+msgid ""
+"**Improve existing use cases and create new ones** that `make fairness "
+"issues concrete <https://fairlearn.github.io/contributor_guide/"
+"contributing_example_notebooks.html>`_. These use cases may or may not use "
+"the Fairlearn package. To accelerate this process, we are experimenting "
+"with :ref:`weekly sessions <community_calls>` where people can discuss "
+"ideas, ongoing projects, and individual example notebooks in detail."
+msgstr ""
+"**Mejore los casos de uso existentes y cree nuevos** que `hagan que los "
+"problemas de equidad sean concretos <https://fairlearn.github.io/"
+"contributor_guide/contributing_example_notebooks.html>`_. Estos casos de "
+"uso pueden utilizar o no el paquete Fairlearn. Para acelerar este proceso, "
+"estamos experimentando con :ref:`sesiones semanales <community_calls>` "
+"donde las personas pueden discutir ideas, proyectos en curso y cuadernos "
+"de ejemplo individuales en detalle."
+
+#: ../../about/index.rst:78
+#, fuzzy
+msgid ""
+"**Improve the project documentation**: critique the current content, "
+"expand user guides, improve writing and examples, port the current Python "
+"documentation to the numpydoc format. Convert existing example notebooks "
+"from `.ipynb` into `.py` files that `render properly on the website "
+"<https://fairlearn.github.io/auto_examples/notebooks/index.html>`_, while "
+"still being downloadable as `.py` or `.ipynb` files."
+msgstr ""
+"**Mejorar la documentación del proyecto**: critique el contenido actual, "
+"amplíe las guías de usuario, mejore la escritura y los ejemplos, "
+"transfiera la documentación actual de Python al formato numpydoc. "
+"Convierta los cuadernos de ejemplo existentes de `.ipynb` en archivos `."
+"py` que `se interpreten correctamente en el sitio web <https://fairlearn."
+"github.io/auto_examples/notebooks/index.html>`_, sin dejar de ser "
+"descargables como Archivos `.py` o `.ipynb`."
+
+#: ../../about/index.rst:85
+#, fuzzy
+msgid ""
+"**Improve the usability, relevance, and look of Fairlearn website** with "
+"the audience of practitioners in mind. Engage by participating in the "
+"discussions on `community calls <community_calls>`_ or in the "
+"corresponding `discussions <https://github.com/fairlearn/fairlearn/"
+"discussions>`_. You can also give us feedback by filing a new issue."
+msgstr ""
+"**Mejorar la usabilidad, la relevancia y el aspecto del sitio web de "
+"Fairlearn** con la audiencia de profesionales en mente. Participe "
+"participando en las discusiones sobre `llamadas comunitarias "
+"<community_calls>`_ o en las `discusiones <https://github.com/fairlearn/"
+"fairlearn/discussions>`_ correspondientes. También puede enviarnos sus "
+"comentarios presentando vía el uso de GitHub Issues."
+
+#: ../../about/index.rst:92
+#, fuzzy
+msgid ""
+"**Improve the usability and relevance of fairness metrics** by critiquing "
+"and improving the current metrics API, suggesting new metrics motivated by "
+"concrete use cases, and implementing the new metrics. The issues page "
+"`contains several metrics tasks <https://github.com/fairlearn/fairlearn/"
+"issues?q=is%3Aissue+is%3Aopen+metric>`_."
+msgstr ""
+"**Mejore la usabilidad y la relevancia de las métricas de equidad** "
+"mediante la crítica y la mejora de las métricas actuales del API, "
+"sugiriendo nuevas métricas motivadas por casos de uso concretos e "
+"implementando las nuevas métricas. La página de problemas `contiene varias "
+"tareas de métricas <https://github.com/fairlearn/fairlearn/issues?q=is"
+"%3Aissue+is%3Aopen+metric>`_."
+
+#: ../../about/index.rst:98
+msgid ""
+"**Move towards compatibility with scikit-learn**: identify incompatible "
+"aspects, improve code towards compatibility. While we aim for "
+"compatibility there may be aspects that are too restricting for Fairlearn, "
+"so this may need to be evaluated on a case-by-case basis."
+msgstr ""
+"**Avanzar hacia la compatibilidad con scikit-learn**: identificar aspectos "
+"incompatibles, mejorar el código hacia la compatibilidad. Si bien nuestro "
+"objetivo es la compatibilidad, puede haber aspectos que sean demasiado "
+"restrictivos para Fairlearn, por lo que es posible que deba evaluarse caso "
+"por caso."
+
+#: ../../about/index.rst:104
+msgid "*Grow and nurture a diverse community of contributors*"
+msgstr "*Crecer y cultivar una comunidad diversa de colaboradores*"
+
+#: ../../about/index.rst:106
+msgid ""
+"**Reach out** with feedback on what is working and what is not working; "
+"suggest how to improve things; point out where documentation, our "
+"processes or any other aspect of the projects create barriers of entry."
+msgstr ""
+"**Comuníquese** con comentarios sobre lo que está funcionando y lo que no; "
+"sugiera cómo mejorar las cosas; señale dónde la documentación, nuestros "
+"procesos o cualquier otro aspecto de los proyectos crean barreras de "
+"entrada."
+
+#: ../../about/index.rst:111
+#, fuzzy
+msgid ""
+"**Participate** in our :ref:`weekly community calls <community_calls>`. We "
+"also work with universities to engage student contributors through course "
+"projects and are also open to other forms of collaboration --- let us know "
+"if you are interested."
+msgstr ""
+"**Participar** en nuestras :ref:`llamadas comunitarias semanales "
+"<community_calls>`. También trabajamos con universidades para involucrar a "
+"los estudiantes a través de proyectos y también estamos abiertos a otras "
+"formas de colaboración; háganos saber si está interesado."
+
+#: ../../about/index.rst:116
+#, fuzzy
+msgid ""
+"**Improve the Fairlearn website and documentation**. See the contributor "
+"guide on :ref:`how to contribute to our docs <contributing_documentation>`."
+msgstr ""
+"**Mejorar el sitio web y la documentación de Fairlearn *. Consulte la guía "
+"del colaborador sobre: ref: `cómo contribuir a nuestros documentos "
+"<contributing_documentation>`."
+
+#: ../../about/index.rst:120
+msgid "**Add tests and improve testing infrastructure.**"
+msgstr "**Agregar y mejorar la infraestructura de pruebas de código.**"
+
+#: ../../about/index.rst:122
+msgid ""
+"*Create metrics, assessment tools, and algorithms to cover more complex ML "
+"tasks*"
+msgstr ""
+"*Crear métricas, herramientas de evaluación y algoritmos para cubrir "
+"tareas de aprendizaje automático (AA) más complejas*"
+
+#: ../../about/index.rst:124
+msgid ""
+"**Create notebooks and use cases** that deal with :ref:`concrete fairness "
+"issues <contributing_example_notebooks>` in complex ML tasks including "
+"ranking, counterfactual estimation, text, computer vision, speech, etc."
+msgstr ""
+"**Crear cuadernos y casos de uso** que se ocupen de :ref:`problemas "
+"concretos de equidad <contributing_example_notebooks>` en tareas complejas "
+"de AA que incluyen clasificación, estimación contrafactual, texto, visión "
+"por computadora, habla, etc."
+
+#: ../../about/index.rst:129
+msgid ""
+"**Lead and participate in contribution efforts** around under-researched, "
+"but practically relevant ML areas in ranking, counterfactual estimation, "
+"text, computer vision, speech, etc. These are likely to be mixed "
+"research / practice efforts and we expect substantial contributor "
+"commitment before embarking on these."
+msgstr ""
+"**Dirigir y participar en esfuerzos de contribución** en áreas de AA poco "
+"investigadas, pero prácticamente relevantes en clasificación, estimación "
+"contrafactual, texto, visión por computadora, habla, etc. Es probable que "
+"sean esfuerzos mixtos de investigación / práctica y esperamos un "
+"contribuyente sustancial compromiso antes de embarcarse en estos."
+
+#: ../../about/index.rst:138
+msgid "Governance"
+msgstr "Gobernanza "
+
+#: ../../about/index.rst:140
+#, fuzzy
+msgid ""
+"Fairlearn is a project of the `Fairlearn Organization <https://github.com/"
+"fairlearn/governance/blob/main/ORG-GOVERNANCE.md>`_ and follows the "
+"`Fairlearn Organization's Project Governance <https://github.com/fairlearn/"
+"governance/blob/main/PROJECT-GOVERNANCE.md>`_."
+msgstr ""
+"Fairlearn es un proyecto de `la Organización de Fairlearn <https://github."
+"com/fairlearn/governance/blob/main/ORG-GOVERNANCE.md>`_ y sigue `el "
+"Proyecto de Gobernanza de la Organización de Fairlearn<https://github.com/"
+"fairlearn/governance/blob/main/PROJECT-GOVERNANCE.md>`"
+
+#: ../../about/index.rst:148
+msgid "Maintainers"
+msgstr "Mantenedores"
+
+#: ../../about/index.rst:150
+msgid "The maintainers of the Fairlearn project are"
+msgstr "Los mantenedores del proyecto Fairlearn son"
+
+#: ../../about/index.rst:152
+msgid "`Adrin Jalali <https://github.com/adrinjalali>`_"
+msgstr "`Adrin Jalali <https://github.com/adrinjalali>`_"
+
+#: ../../about/index.rst:153
+msgid "`Hilde Weerts <https://github.com/hildeweerts>`_"
+msgstr "`Hilde Weerts <https://github.com/hildeweerts>`_"
+
+#: ../../about/index.rst:154
+msgid "`Michael Madaio <https://github.com/mmadaio>`_"
+msgstr "`Michael Madaio <https://github.com/mmadaio>`_"
+
+#: ../../about/index.rst:155
+msgid "`Miro Dudik <https://github.com/MiroDudik>`_"
+msgstr "`Miro Dudik <https://github.com/MiroDudik>`_"
+
+#: ../../about/index.rst:156
+msgid "`Richard Edgar <https://github.com/riedgar-ms>`_"
+msgstr "`Richard Edgar <https://github.com/riedgar-ms>`_"
+
+#: ../../about/index.rst:157
+msgid "`Roman Lutz <https://github.com/romanlutz>`_"
+msgstr "`Roman Lutz <https://github.com/romanlutz>`_"
+
+#: ../../about/index.rst:162
+msgid "Project history"
+msgstr "Historia del proyecto"
+
+#: ../../about/index.rst:164
+#, fuzzy
+msgid ""
+"Fairlearn was started in 2018 by Miro Dudik from Microsoft Research as a "
+"Python package to accompany the research paper, `A Reductions Approach to "
+"Fair Classification <http://proceedings.mlr.press/v80/agarwal18a/"
+"agarwal18a.pdf>`_. The package provided a reduction algorithm for "
+"mitigating unfairness in binary classification models --- a setting that "
+"was commonly studied in the machine learning community. The paper and the "
+"Python package were well received, so Miro Dudik and Hanna Wallach with "
+"their collaborators sought to translate the research into an industry "
+"context. However, they discovered that practitioners typically need to "
+"address more fundamental fairness issues before applying specific "
+"algorithms, and that mitigating unfairness in binary classification models "
+"is a relatively rare use case. They also discovered that fairness "
+"assessment is a common need, along with access to domain-specific guides "
+"to fairness metrics and unfairness mitigation algorithms. Additionally, "
+"many use cases take the form of regression or ranking, rather than "
+"classification. As a result of these insights, fairness assessment and use-"
+"case notebooks became key components of Fairlearn. Fairlearn also focuses "
+"on machine learning tasks beyond binary classification."
+msgstr ""
+"Fairlearn fue iniciado en 2018 por Miro Dudik de Microsoft Research como "
+"un paquete de Python para acompañar el artículo de investigación, `A "
+"Reductions Approach to Fair Classification <http://proceedings.mlr.press/"
+"v80/agarwal18a/agarwal18a.pdf>`_. El paquete proporcionó un algoritmo de "
+"reducción para mitigar la injusticia en los modelos de clasificación "
+"binaria, una configuración que se estudió comúnmente en la comunidad de "
+"aprendizaje automático. El documento y el paquete de Python fueron bien "
+"recibidos, por lo que Miro Dudik y Hanna Wallach con sus colaboradores "
+"buscaron traducir la investigación en un contexto industrial. Sin embargo, "
+"descubrieron que los profesionales normalmente necesitan abordar "
+"cuestiones de equidad más fundamentales antes de aplicar algoritmos "
+"específicos, y que mitigar la injusticia en los modelos de clasificación "
+"binaria es un caso de uso relativamente raro. También descubrieron que la "
+"evaluación de la equidad es una necesidad común, junto con el acceso a "
+"guías específicas del dominio para métricas de equidad y algoritmos de "
+"mitigación de la equidad. Además, muchos casos de uso toman la forma de "
+"regresión o clasificación, en lugar de clasificación. Como resultado de "
+"estos conocimientos, la evaluación de la equidad y los cuadernos de casos "
+"de uso se convirtieron en componentes clave de Fairlearn. Fairlearn "
+"también se enfoca en tareas de aprendizaje automático más allá de la "
+"clasificación binaria."
+
+#: ../../about/index.rst:186
+msgid ""
+"The project was greatly expanded in the second half of 2019 thanks to the "
+"involvement of many contributors from Azure ML and Microsoft Research. At "
+"that time, the project started to have regular releases."
+msgstr ""
+"El proyecto se expandió enormemente en la segunda mitad de 2019 gracias a "
+"la participación de muchos colaboradores de Azure ML y Microsoft Research. "
+"En ese momento, el proyecto comenzó a tener lanzamientos regulares."
+
+#: ../../about/index.rst:190
+#, fuzzy
+msgid ""
+"In 2021 Fairlearn adopted `neutral governance <https://github.com/"
+"fairlearn/governance>`_ and since then the project is completely community-"
+"driven."
+msgstr ""
+"En 2021, Fairlearn adoptó una `gobernanza neutral <https://github.com/"
+"fairlearn/governance>`_ y desde entonces el proyecto está completamente "
+"impulsado por la comunidad."
+
+#: ../../about/index.rst:195
+msgid "Citing Fairlearn"
+msgstr "Citando a Fairlearn"
+
+#: ../../about/index.rst:197
+msgid "If you wish to cite Fairlearn in your work, please use the following:"
+msgstr "Si desea citar Fairlearn en su trabajo, utilice lo siguiente:"
+
+#: ../../about/index.rst:212
+msgid "Frequently asked questions"
+msgstr "Preguntas frecuentes"
+
+#: ../../about/index.rst:214
+#, fuzzy
+msgid "See our :ref:`faq` page."
+msgstr "Vea nuestra página :ref:`fan`"

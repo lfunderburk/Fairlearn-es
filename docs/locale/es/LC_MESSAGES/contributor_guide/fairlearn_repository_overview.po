@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:2
+msgid "Fairlearn Repository Overview"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:4
+msgid ""
+"Everything in the Fairlearn repository falls under one of the following "
+"categories:"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:7
+msgid ""
+"Python source code in the `fairlearn "
+"<https://github.com/fairlearn/fairlearn/tree/main/fairlearn>`_ directory"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:10
+msgid ""
+"Python test code in the `test "
+"<https://github.com/fairlearn/fairlearn/tree/main/test>`_ directory"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:12
+msgid ""
+"Visualization source code in the `visualization "
+"<https://github.com/fairlearn/fairlearn/tree/main/visualization>`_ "
+"directory"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:15
+msgid "Automation / DevOps / CI pipeline definitions for"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:17
+msgid ""
+"Azure DevOps in the `devops "
+"<https://github.com/fairlearn/fairlearn/tree/main/devops>`_ directory"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:20
+msgid ""
+"GitHub Actions in the `.github "
+"<https://github.com/fairlearn/fairlearn/tree/main/.github>`_ directory"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:23
+msgid ""
+"CircleCI in the `.circleci "
+"<https://github.com/fairlearn/fairlearn/tree/main/.circleci>`_ directory"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:27
+msgid ""
+"Documentation definition and configuration in the `docs "
+"<https://github.com/fairlearn/fairlearn/tree/main/docs>`_ directory"
+msgstr ""
+
+#: ../../contributor_guide/fairlearn_repository_overview.rst:29
+msgid ""
+"Example notebooks in the `examples "
+"<https://github.com/fairlearn/fairlearn/tree/main/examples>`_ directory"
+msgstr ""
+

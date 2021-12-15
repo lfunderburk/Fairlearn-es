@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../quickstart.rst:4
+msgid "Quickstart"
+msgstr ""
+
+#: ../../quickstart.rst:7
+msgid "Installation"
+msgstr ""
+
+#: ../../quickstart.rst:9
+msgid ""
+"Fairlearn can be installed with :code:`pip` from `PyPI "
+"<https://pypi.org/project/fairlearn>`_ as follows:"
+msgstr ""
+
+#: ../../quickstart.rst:16
+msgid ""
+"Fairlearn is also available on `conda-forge <https://anaconda.org/conda-"
+"forge/fairlearn>`_:"
+msgstr ""
+
+#: ../../quickstart.rst:23
+msgid ""
+"If you are updating from a previous version of Fairlearn, please see "
+":ref:`version_migration_guide`."
+msgstr ""
+
+#: ../../quickstart.rst:28
+msgid ""
+"The Fairlearn API is still evolving, so example code in this "
+"documentation may not work with every version of Fairlearn. Please use "
+"the version selector to get to the instructions for the appropriate "
+"version. The instructions for the :code:`main` branch require Fairlearn "
+"to be installed from a clone of the repository."
+msgstr ""
+
+#: ../../quickstart.rst:36
+msgid "Overview of Fairlearn"
+msgstr ""
+
+#: ../../quickstart.rst:38
+msgid "The Fairlearn package has two components:"
+msgstr ""
+
+#: ../../quickstart.rst:40
+msgid ""
+"*Metrics* for assessing which groups are negatively impacted by a model, "
+"and for comparing multiple models in terms of various fairness and "
+"accuracy metrics."
+msgstr ""
+
+#: ../../quickstart.rst:44
+msgid ""
+"*Algorithms* for mitigating unfairness in a variety of AI tasks and along"
+" a variety of fairness definitions."
+msgstr ""
+
+#: ../../quickstart.rst:48
+msgid "Fairlearn in 10 minutes"
+msgstr ""
+
+#: ../../quickstart.rst:50
+msgid ""
+"The Fairlearn tookit can assist in assessing and mitigation unfairness in"
+" Machine Learning models. It's impossible to provide a sufficient "
+"overview of fairness in ML in this Quickstart tutorial, so we highly "
+"recommend starting with our :ref:`user_guide`. Fairness is a "
+"fundamentally sociotechnical challenge and cannot be solved with "
+"technical tools alone. They may be helpful for certain tasks such as "
+"assessing unfairness through various metrics, or to mitigate observed "
+"unfairness when training a model. Additionally, fairness has different "
+"definitions in different contexts and it may not be possible to represent"
+" it quantitatively at all."
+msgstr ""
+
+#: ../../quickstart.rst:60
+msgid ""
+"Given these considerations this Quickstart tutorial merely provides short"
+" code snippet examples of how to use basic Fairlearn functionality for "
+"those who are already intimately familiar with fairness in ML. The "
+"example below is about binary classification, but we similarly support "
+"regression."
+msgstr ""
+
+#: ../../quickstart.rst:66
+msgid "Loading the dataset"
+msgstr ""
+
+#: ../../quickstart.rst:68
+msgid ""
+"For this example we use the `UCI adult dataset "
+"<https://archive.ics.uci.edu/ml/datasets/Adult>`_ where the objective is "
+"to predict whether a person makes more (label 1) or less (0) than $50,000"
+" a year."
+msgstr ""
+
+#: ../../quickstart.rst:93
+msgid "Evaluating fairness-related metrics"
+msgstr ""
+
+#: ../../quickstart.rst:95
+msgid ""
+"Firstly, Fairlearn provides fairness-related metrics that can be compared"
+" between groups and for the overall population. Using existing metric "
+"definitions from `scikit-learn <https://scikit-"
+"learn.org/stable/modules/classes.html#module-sklearn.metrics>`_ we can "
+"evaluate metrics for subgroups within the data as below:"
+msgstr ""
+
+#: ../../quickstart.rst:121
+msgid ""
+"Additionally, Fairlearn has lots of other standard metrics built-in, such"
+" as selection rate, i.e., the percentage of the population which have '1'"
+" as their label:"
+msgstr ""
+
+#: ../../quickstart.rst:138
+msgid ""
+"Fairlearn also allows us to quickly plot these metrics from the "
+":class:`fairlearn.metrics.MetricFrame`"
+msgstr ""
+
+#: ../../quickstart.rst:152
+msgid "Mitigating disparity"
+msgstr ""
+
+#: ../../quickstart.rst:154
+msgid ""
+"If we observe disparities between groups we may want to create a new "
+"model while specifying an appropriate fairness constraint. Note that the "
+"choice of fairness constraints is crucial for the resulting model, and "
+"varies based on application context. If selection rate is highly relevant"
+" for fairness in this contrived example, we can attempt to mitigate the "
+"observed disparity using the corresponding fairness constraint called "
+"Demographic Parity. In real world applications we need to be mindful of "
+"the sociotechnical context when making such decisions. The Exponentiated "
+"Gradient mitigation technique used fits the provided classifier using "
+"Demographic Parity as the objective, leading to a vastly reduced "
+"difference in selection rate:"
+msgstr ""
+
+#: ../../quickstart.rst:189
+msgid "What's next?"
+msgstr ""
+
+#: ../../quickstart.rst:191
+msgid ""
+"Please refer to our :ref:`user_guide` for a comprehensive view on "
+"Fairness in Machine Learning and how Fairlearn fits in, as well as an "
+"exhaustive guide on all parts of the toolkit. For concrete examples check"
+" out the :ref:`sphx_glr_auto_examples` section. Finally, we also have a "
+"collection of :ref:`faq`."
+msgstr ""
+

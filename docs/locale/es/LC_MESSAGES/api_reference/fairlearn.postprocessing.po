@@ -1,0 +1,326 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018 - 2021, Fairlearn contributors
+# This file is distributed under the same license as the Fairlearn package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairlearn \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 12:35-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../api_reference/fairlearn.postprocessing.rst:2
+msgid "fairlearn\\.postprocessing package"
+msgstr ""
+
+#: fairlearn.postprocessing:1 of
+msgid ""
+"This module contains methods which operate on a predictor, rather than an"
+" estimator."
+msgstr ""
+
+#: fairlearn.postprocessing:3 of
+msgid ""
+"The predictor's output is adjusted to fulfill specified parity "
+"constraints. The postprocessors learn how to adjust the predictor's "
+"output from the training data."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:1 of
+msgid ""
+"Bases: :py:class:`sklearn.base.BaseEstimator`, "
+":py:class:`sklearn.base.MetaEstimatorMixin`"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:1 of
+msgid "A classifier based on the threshold optimization approach."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:3 of
+msgid ""
+"The classifier is obtained by applying group-specific thresholds to the "
+"provided estimator. The thresholds are chosen to optimize the provided "
+"performance objective subject to the provided fairness constraints."
+msgstr ""
+
+#: fairlearn.postprocessing._plotting.plot_threshold_optimizer
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.fit
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.predict of
+msgid "Parameters"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:7 of
+msgid ""
+"A `scikit-learn compatible estimator <https://scikit-"
+"learn.org/stable/developers/develop.html#estimators>`_  # noqa whose "
+"output is postprocessed."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:10 of
+msgid ""
+"Fairness constraints under which threshold optimization is performed. "
+"Possible inputs are:      'demographic_parity', 'selection_rate_parity' "
+"(synonymous)         match the selection rate across groups      "
+"'{false,true}_{positive,negative}_rate_parity'         match the named "
+"metric across groups      'equalized_odds'         match true positive "
+"and false positive rates across groups"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:10 of
+msgid ""
+"Fairness constraints under which threshold optimization is performed. "
+"Possible inputs are:"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:14 of
+msgid "'demographic_parity', 'selection_rate_parity' (synonymous)"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:14 of
+msgid "match the selection rate across groups"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:17 of
+msgid "'{false,true}_{positive,negative}_rate_parity'"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:17 of
+msgid "match the named metric across groups"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:19 of
+msgid "'equalized_odds'"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:20 of
+msgid "match true positive and false positive rates across groups"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:22 of
+msgid ""
+"Performance objective under which threshold optimization is performed. "
+"Not all objectives are allowed for all types of constraints. Possible "
+"inputs are:      'accuracy_score', 'balanced_accuracy_score'         "
+"allowed for all constraint types      'selection_rate', "
+"'true_positive_rate', 'true_negative_rate',         allowed for all "
+"constraint types except 'equalized_odds'"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:22 of
+msgid ""
+"Performance objective under which threshold optimization is performed. "
+"Not all objectives are allowed for all types of constraints. Possible "
+"inputs are:"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:27 of
+msgid "'accuracy_score', 'balanced_accuracy_score'"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:27 of
+msgid "allowed for all constraint types"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:29 of
+msgid "'selection_rate', 'true_positive_rate', 'true_negative_rate',"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:30 of
+msgid "allowed for all constraint types except 'equalized_odds'"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:32 of
+msgid ""
+"The values of the constraint metric are discretized according to the grid"
+" of the specified size over the interval [0,1] and the optimization is "
+"performed with respect to the constraints achieving those values. In case"
+" of 'equalized_odds' the constraint metric is the false positive rate."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:38 of
+msgid "If True, then allow flipping the decision if it improves the resulting"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:40 of
+msgid ""
+"If True, avoid refitting the given estimator. Note that when used with "
+":func:`sklearn.model_selection.cross_val_score`, "
+":class:`sklearn.model_selection.GridSearchCV`, this will result in an "
+"error. In that case, please use ``prefit=False``."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:45 of
+msgid ""
+"Defines which method of the ``estimator`` is used to get the output "
+"values.  - 'auto': use one of ``predict_proba``, ``decision_function``, "
+"or   ``predict``, in that order. - 'predict_proba': use the second column"
+" from the output of   `predict_proba`. It is assumed that the second "
+"column represents the   positive outcome. - 'decision_function': use the "
+"raw values given by the   `decision_function`. - 'predict': use the hard "
+"values reported by the `predict` method if   estimator is a classifier, "
+"and the regression values if estimator is   a regressor. This is "
+"equivalent to what is done in [1]_.  .. versionadded:: 0.7     In "
+"previous versions only the ``predict`` method was used     implicitly.  "
+".. versionchanged:: 0.7     From version 0.7, 'predict' is deprecated as "
+"the default value and     the default will change to 'auto' from v0.10."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:45 of
+msgid ""
+"Defines which method of the ``estimator`` is used to get the output "
+"values."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:48 of
+msgid ""
+"'auto': use one of ``predict_proba``, ``decision_function``, or "
+"``predict``, in that order."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:50 of
+msgid ""
+"'predict_proba': use the second column from the output of "
+"`predict_proba`. It is assumed that the second column represents the "
+"positive outcome."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:53 of
+msgid "'decision_function': use the raw values given by the `decision_function`."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:55 of
+msgid ""
+"'predict': use the hard values reported by the `predict` method if "
+"estimator is a classifier, and the regression values if estimator is a "
+"regressor. This is equivalent to what is done in [1]_."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:59 of
+msgid "In previous versions only the ``predict`` method was used implicitly."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:63 of
+msgid ""
+"From version 0.7, 'predict' is deprecated as the default value and the "
+"default will change to 'auto' from v0.10."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:69 of
+msgid "Notes"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:70 of
+msgid ""
+"The procedure is based on the algorithm of `Hardt et al. (2016) "
+"<https://arxiv.org/abs/1610.02413>`_ [1]_."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:74 of
+msgid "References"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer:75 of
+msgid ""
+"M. Hardt, E. Price, and N. Srebro, \"Equality of Opportunity in "
+"Supervised Learning,\" arXiv.org, 07-Oct-2016. [Online]. Available: "
+"https://arxiv.org/abs/1610.02413."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.fit:1 of
+msgid "Fit the model."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.fit:3 of
+msgid ""
+"The fit is based on training features and labels, sensitive features, as "
+"well as the fairness-unaware predictor or estimator. If an estimator was "
+"passed in the constructor this fit method will call `fit(X, y, **kwargs)`"
+" on said estimator."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.fit:7 of
+msgid "The feature matrix"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.fit:9 of
+msgid "The label vector"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.fit:11
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.predict:5
+#: of
+msgid "sensitive features to identify groups by"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.predict:1
+#: of
+msgid ""
+"Predict label for each sample in X while taking into account             "
+"sensitive features."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.predict:3
+#: of
+msgid "feature matrix"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.predict:7
+#: of
+msgid ""
+"Controls random numbers used for randomized predictions. Pass an int for "
+"reproducible output across multiple function calls."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.predict of
+msgid "Returns"
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.predict:11
+#: of
+msgid ""
+"The prediction in the form of a scalar or vector. If `X` represents the "
+"data for a single example the result will be a scalar. Otherwise the "
+"result will be a vector."
+msgstr ""
+
+#: fairlearn.postprocessing._threshold_optimizer.ThresholdOptimizer.predict of
+msgid "Return type"
+msgstr ""
+
+#: fairlearn.postprocessing._plotting.plot_threshold_optimizer:1 of
+msgid "Plot the chosen solution of the threshold optimizer."
+msgstr ""
+
+#: fairlearn.postprocessing._plotting.plot_threshold_optimizer:3 of
+msgid ""
+"For `fairlearn.postprocessing.ThresholdOptimizer` objects that have their"
+" constraint set to `'demographic_parity'` this will result in a "
+"selection/error curve plot. For "
+"`fairlearn.postprocessing.ThresholdOptimizer` objects that have their "
+"constraint set to `'equalized_odds'` this will result in a ROC curve "
+"plot."
+msgstr ""
+
+#: fairlearn.postprocessing._plotting.plot_threshold_optimizer:9 of
+msgid ""
+"the `ThresholdOptimizer` instance for which the results should be "
+"illustrated."
+msgstr ""
+
+#: fairlearn.postprocessing._plotting.plot_threshold_optimizer:12 of
+msgid "a custom `matplotlib.axes.Axes` object to use for the plots, default None"
+msgstr ""
+
+#: fairlearn.postprocessing._plotting.plot_threshold_optimizer:14 of
+msgid "whether or not the generated plot should be shown, default True"
+msgstr ""
+
