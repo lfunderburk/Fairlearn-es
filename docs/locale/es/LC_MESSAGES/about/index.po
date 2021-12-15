@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Fairlearn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 12:35-0800\n"
-"PO-Revision-Date: 2021-12-15 13:15-0800\n"
+"PO-Revision-Date: 2021-12-15 15:26-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -317,10 +317,9 @@ msgstr ""
 
 #: ../../about/index.rst:138
 msgid "Governance"
-msgstr "Gobernanza "
+msgstr "Gobernanza"
 
 #: ../../about/index.rst:140
-#, fuzzy
 msgid ""
 "Fairlearn is a project of the `Fairlearn Organization <https://github.com/"
 "fairlearn/governance/blob/main/ORG-GOVERNANCE.md>`_ and follows the "
@@ -330,7 +329,7 @@ msgstr ""
 "Fairlearn es un proyecto de `la Organización de Fairlearn <https://github."
 "com/fairlearn/governance/blob/main/ORG-GOVERNANCE.md>`_ y sigue `el "
 "Proyecto de Gobernanza de la Organización de Fairlearn<https://github.com/"
-"fairlearn/governance/blob/main/PROJECT-GOVERNANCE.md>`"
+"fairlearn/governance/blob/main/PROJECT-GOVERNANCE.md>`."
 
 #: ../../about/index.rst:148
 msgid "Maintainers"
@@ -446,6 +445,5 @@ msgid "Frequently asked questions"
 msgstr "Preguntas frecuentes"
 
 #: ../../about/index.rst:214
-#, fuzzy
 msgid "See our :ref:`faq` page."
-msgstr "Vea nuestra página :ref:`fan`"
+msgstr "Vea nuestra página :ref:`fan`."
