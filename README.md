@@ -4,7 +4,7 @@
 
 Traducción de documentación del paquete de Python: Fairlearn.
 
-> Nota: esta traducción está basada en release/0.7.0
+> Nota: esta traducción está basada en release/0.7.0 https://github.com/fairlearn/fairlearn/tree/release/v0.7.0
 
 # Fairlearn
 
