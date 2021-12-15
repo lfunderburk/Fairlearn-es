@@ -398,33 +398,33 @@ grouped_on_race.difference(method="between_groups")
 grouped_on_race.difference(method="to_overall")
 
 # %%
-# There are situations where knowing the ratios of the metrics evaluated on
-# the subgroups is more useful. For this we have the ``ratio()`` method.
-# We can take the ratios between the minimum and maximum values of each metric:
+# Hay situaciones en las que conocer los radios de las métricas evaluadas en
+# los subgrupos es más útil. Para ello tenemos el método ``ratio()``.
+# Podemos tomar las relaciones entre los valores mínimo y máximo de cada métrica:
 
 grouped_on_race.ratio(method="between_groups")
 
 # %%
-# We can also compute the ratios relative to the overall value for each
-# metric. Analogous to the differences, the ratios are always in the range
-# :math:`[0,1]`:
+# También podemos calcular los radios relativos al valor general de cada
+# métrica. De manera análoga a las diferencias, las proporciones están siempre en el rango
+# :math: `[0,1]`:
+
 grouped_on_race.ratio(method="to_overall")
 
 # %%
-# Intersections of Features
-# =========================
+# Intersección de características
+# =================================
 #
-# So far we have only considered a single sensitive feature at a time,
-# and we have already found some serious issues in our example data.
-# However, sometimes serious issues can be hiding in intersections of
-# features. For example, the
-# `Gender Shades project <https://www.media.mit.edu/projects/gender-shades/overview/>`_
-# found that facial recognition algorithms performed worse for blacks
-# than whites, and also worse for women than men (despite overall high
-# accuracy score). Moreover, performance on black females was *terrible*.
-# We can examine the intersections of sensitive features by passing
-# multiple columns to the :class:`fairlearn.metrics.MetricFrame`
-# constructor:
+# Hasta ahora, solo hemos considerado una característica sensible a la vez,
+# y ya hemos encontrado algunos problemas graves en nuestros datos de ejemplo.
+# Sin embargo, a veces se pueden esconder problemas graves en las intersecciones de
+# características. Por ejemplo, el
+# `Proyecto Gender Shades <https://www.media.mit.edu/projects/gender-shades/overview/>`_
+# descubrió que los algoritmos de reconocimiento facial funcionaban peor para los negros
+# que los blancos, y también peor para las mujeres que para los hombres (a pesar de la alta
+# puntuación de precisión). Además, el rendimiento en mujeres negras fue *terrible*.
+# Podemos examinar las intersecciones de características sensibles pasando
+# varias columnas para el constructor :class:`fairlearn.metrics.MetricFrame`:
 
 grouped_on_race_and_sex = MetricFrame(
     metrics=metric_fns,
@@ -434,40 +434,43 @@ grouped_on_race_and_sex = MetricFrame(
 )
 
 # %%
-# The overall values are unchanged, but the ``by_group`` table now
-# shows the intersections between subgroups:
+# Los valores generales no han cambiado, pero la tabla ``by_group`` ahora
+# muestra las intersecciones entre subgrupos:
+
 assert (grouped_on_race_and_sex.overall == grouped_on_race.overall).all()
 grouped_on_race_and_sex.by_group
 
 # %%
-# The aggregations are still performed across all subgroups for each metric,
-# so each continues to reduce to a single value. If we look at the
-# ``group_min()``, we see that we violate the mandate we specified for the
-# ``fbeta_score()`` suggested above (for females with a race of 'Other' in
-# fact):
+# Las agregaciones aún se realizan en todos los subgrupos para cada métrica,
+# para que cada uno continúe reduciéndose a un solo valor. Si miramos
+# `` group_min()``, vemos que violamos el mandato que especificamos para
+# `` fbeta_score()`` sugerido arriba (para mujeres con una raza de 'Otro'):
+
 grouped_on_race_and_sex.group_min()
 
 # %%
-# Looking at the ``ratio()`` method, we see that the disparity is worse
-# (specifically between white males and black females, if we check in
-# the ``by_group`` table):
+# Mirando el método ``ratio()``, vemos que la disparidad es peor
+# (específicamente entre hombres blancos y mujeres negras, si revisamos
+# la tabla ``by_group``):
+
 grouped_on_race_and_sex.ratio(method="between_groups")
 
 # %%
-# Control Features
-# ================
+# Funciones de control
+# ====================
 #
-# There is a further way we can slice up our data. We have (*completely
-# made up*) features for the individuals' credit scores (in three bands)
-# and also the size of the loan requested (large or small). In our loan
-# scenario, it is acceptable that individuals with high credit scores
-# are selected more often than individuals with low credit scores.
-# However, within each credit score band, we do not want a disparity
-# between (say) black females and white males. To example these cases,
-# we have the concept of *control features*.
+# Hay otra forma en que podemos dividir nuestros datos. Tenemos (*completamente
+# inventadas*) características para los puntajes crediticios de las personas (en tres rangos)
+# y también el tamaño del préstamo solicitado (grande o pequeño). En el escenario de préstamo,
+# es aceptable que las personas con puntajes crediticios altos
+# sean seleccionadas con más frecuencia que las personas con puntajes crediticios bajos.
+# Sin embargo, dentro de cada rango de puntaje crediticio, no queremos una disparidad
+# entre (digamos) mujeres negras y hombres blancos. Para ejemplificar estos casos,
+# tenemos el concepto de *funciones de control*.
 #
-# Control features are introduced by the ``control_features=``
-# argument to the :class:`fairlearn.metrics.MetricFrame` object:
+# Las funciones de control son introducidas por el argumento ``control_features =``
+# del objeto :class:`fairlearn.metrics.MetricFrame`:
+
 cond_credit_score = MetricFrame(
     metrics=metric_fns,
     y_true=y_test,
@@ -477,30 +480,32 @@ cond_credit_score = MetricFrame(
 )
 
 # %%
-# This has an immediate effect on the ``overall`` property. Instead
-# of having one value for each metric, we now have a value for each
-# unique value of the control feature:
+# Esto tiene un efecto inmediato en la propiedad ``overall``. En lugar
+# de tener un valor para cada métrica, ahora tenemos un valor para cada
+# valor único de la función de control:
+
 cond_credit_score.overall
 
 # %%
-# The ``by_group`` property is similarly expanded:
+# La propiedad ``by_group`` es demostrada de manera similar:
 cond_credit_score.by_group
 
 # %%
-# The aggregates are also evaluated once for each group identified
-# by the control feature:
+# Los agregados de datos también se evalúan una vez para cada grupo identificado
+# por la función de control:
+
 cond_credit_score.group_min()
 
 # %%
-# And:
+# Y:
 cond_credit_score.ratio(method="between_groups")
 
 # %%
-# In our data, we see that we have a dearth of positive results
-# for high income non-whites, which significantly affects the
-# aggregates.
+# En nuestros datos, vemos que tenemos una escasez de resultados positivos
+# para aquellos que no blancos y que tienen altos ingresos, lo que afecta significativamente
+# los agregados de datos.
 #
-# We can continue adding more control features:
+# Podemos seguir agregando más funciones de control:
 cond_both = MetricFrame(
     metrics=metric_fns,
     y_true=y_test,
@@ -510,17 +515,18 @@ cond_both = MetricFrame(
 )
 
 # %%
-# The ``overall`` property now splits into more values:
+# La propiedad ``overall`` se desglosa en más valores:
 cond_both.overall
 
 # %%
-# As does the ``by_groups`` property, where ``NaN`` values
-# indicate that there were no samples in the cell:
+# Al igual que la propiedad ``by_groups``, donde los valores ``NaN``
+# indica que no había muestras en la celda:
+
 cond_both.by_group
 
 # %%
-# The aggregates behave similarly. By this point, we are having significant issues
-# with under-populated intersections. Consider:
+# Los agregados de datos se comportan de manera similar. A estas alturas, estamos teniendo problemas importantes
+# con intersecciones poco pobladas. Consideremos:
 
 
 def member_counts(y_true, y_pred):
@@ -539,28 +545,28 @@ counts = MetricFrame(
 counts.by_group
 
 # %%
-# Recall that ``NaN`` indicates that there were no individuals
-# in a cell - ``member_counts()`` will not even have been called.
+# Recordemos que ``NaN`` indica que no hubo individuos
+# en una celda - ``member_counts()`` ni siquiera habrá sido llamado.
 
 # %%
-# Exporting from MetricFrame
-# ==========================
+# Exportando desde MetricFrame
+# ============================
 #
-# Sometimes, we need to extract our data for use in other tools.
-# For this, we can use the :py:meth:`pandas.DataFrame.to_csv` method,
-# since the :py:meth:`~fairlearn.metrics.MetricFrame.by_group` property
-# will be a :class:`pandas.DataFrame` (or in a few cases, it will be
-# a :class:`pandas.Series`, but that has a similar
-# :py:meth:`~pandas.Series.to_csv` method):
+# A veces, necesitamos extraer nuestros datos para usarlos en otras herramientas.
+# Para esto, podemos usar el método :py:meth:`pandas.DataFrame.to_csv`,
+# ya que :py:meth:`~fairlearn.metrics.MetricFrame.by_group`
+# será de tipo :class:`pandas.DataFrame` (o en algunos casos, será
+# de tipo :class:`pandas.Series`, pero tiene un método similar
+# :py:meth:`~ pandas.Series.to_csv`):
 
 csv_output = cond_credit_score.by_group.to_csv()
 print(csv_output)
 
 # %%
-# The :py:meth:`pandas.DataFrame.to_csv` method has a large number of
-# arguments to control the exported CSV. For example, it can write
-# directly to a CSV file, rather than returning a string (as shown
-# above).
+# El método :py:meth:`pandas.DataFrame.to_csv` tiene una gran cantidad de
+# argumentos para controlar el CSV exportado. Por ejemplo, puede escribir
+# directamente a un archivo CSV, en lugar de devolver una cadena de caracteres (como se
+# mostró anteriormente).
 #
-# The :meth:`~fairlearn.metrics.MetricFrame.overall` property can
-# be handled similarly, in the cases that it is not a scalar.
+# La propiedad :meth:`~ fairlearn.metrics.MetricFrame.overall` puede
+# manejarse de manera similar, en los casos en que no sea un escalar.
