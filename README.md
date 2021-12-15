@@ -4,6 +4,8 @@
 
 Traducción de documentación del paquete de Python: Fairlearn.
 
+> Nota: esta traducción está basada en release/0.7.0
+
 # Fairlearn
 
 Fairlearn es un paquete de Python que permite a los desarrolladores de sistemas de inteligencia artificial (IA) evaluar la equidad de su sistema y mitigar cualquier problema de injusticia observado. Fairlearn contiene algoritmos de mitigación y métricas para la evaluación del modelo. Además del código fuente, este repositorio también contiene cuadernos de Jupyter con ejemplos del uso de Fairlearn.
