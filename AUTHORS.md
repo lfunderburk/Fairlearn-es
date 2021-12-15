@@ -1,6 +1,6 @@
-# Contributors
+# Contribuyentes
 
-All names are sorted alphabetically by last name. Contributors, please add your name to the list when you submit a patch to the project.
+Todos los nombres están ordenados alfabéticamente por apellido. Colaboradores, agreguen su nombre a la lista cuando envíen un parche al proyecto.
 
 - [Kurian Benoy](https://github.com/kurianbenoy)
 - [Sarah Bird](https://github.com/slbird)
