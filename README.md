@@ -1,115 +1,87 @@
 [![Build Status](https://dev.azure.com/responsibleai/fairlearn/_apis/build/status/Nightly?branchName=main)](https://dev.azure.com/responsibleai/fairlearn/_build/latest?definitionId=23&branchName=main) ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg) ![PyPI](https://img.shields.io/pypi/v/fairlearn?color=blue) [![Gitter](https://badges.gitter.im/fairlearn/community.svg)](https://gitter.im/fairlearn/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![StackOverflow](https://img.shields.io/badge/StackOverflow-questions-blueviolet)](https://stackoverflow.com/questions/tagged/fairlearn)
 
+# Fairlearn en Español
+
+Traducción de documentación del paquete de Python: Fairlearn.
+
 # Fairlearn
 
-Fairlearn is a Python package that empowers developers of artificial intelligence (AI) systems to assess their system's fairness and mitigate any observed unfairness issues. Fairlearn contains mitigation algorithms as well as metrics for model assessment. Besides the source code, this repository also contains Jupyter notebooks with examples of Fairlearn usage.
+Fairlearn es un paquete de Python que permite a los desarrolladores de sistemas de inteligencia artificial (IA) evaluar la equidad de su sistema y mitigar cualquier problema de injusticia observado. Fairlearn contiene algoritmos de mitigación y métricas para la evaluación del modelo. Además del código fuente, este repositorio también contiene cuadernos de Jupyter con ejemplos del uso de Fairlearn.
 
-Website: https://fairlearn.org/
+Sitio-web: https://fairlearn.org/
 
-- [Current release](#current-release)
-- [What we mean by _fairness_](#what-we-mean-by-fairness)
-- [Overview of Fairlearn](#overview-of-fairlearn)
-  - [Fairlearn metrics](#fairlearn-metrics)
-  - [Fairlearn algorithms](#fairlearn-algorithms)
-- [Install Fairlearn](#install-fairlearn)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Maintainers](#maintainers)
-- [Issues](#issues)
+- [Lanzamiento actual](#lanzamiento-actual)
+- [Lo que queremos decir con *equidad*](#qué-entendemos-por-equidad)
+- [Descripción general de Fairlearn](#descripción-general-de-fairlearn)
+- [Métricas de Fairlearn](#métricas-de-fairlearn)
+- [Algoritmos Fairlearn](#algoritmos-fairlearn)
+- [Instalar Fairlearn](#instalar-fairlearn)
+- [Uso](#uso)
+- [Contribuir a Fairlearn](#contribuir-a-fairlearn)
+- [Mantenedores de Fairlear](#mantenedores-de-fairlearn)
+- [Issues en GitHub](#issues-en-github)
 
-## Current release
+## Lanzamiento actual
 
-- The current stable release is available at
-  [Fairlearn v0.7.0](https://github.com/fairlearn/fairlearn/tree/release/v0.7.0).
+La versión estable actual está disponible en PyPI.
+Nuestra versión actual puede diferir sustancialmente de las versiones anteriores. Los usuarios de versiones anteriores deben visitar nuestra guía de versiones para explorar cambios significativos y encontrar información sobre cómo migrar.
 
-- Our current version may differ substantially from earlier versions.
-  Users of earlier versions should visit our
-  [migration guide](https://fairlearn.org/main/user_guide/mitigation.html).
+## ¿Qué entendemos por equidad?
 
-## What we mean by _fairness_
+Un sistema de inteligencia artificial puede comportarse de manera injusta por diversas razones. En Fairlearn, definimos si un sistema de IA se comporta de manera injusta en términos de su impacto en las personas, es decir, en términos de daños. Nos centramos en dos tipos de daños:
 
-An AI system can behave unfairly for a variety of reasons. In Fairlearn, we define whether an AI system is behaving unfairly in terms of its impact on people &ndash; i.e., in terms of harms. We focus on two kinds of harms:
+- *Daños por asignación.* Estos daños pueden ocurrir cuando los sistemas de inteligencia artificial amplían o retienen oportunidades, recursos o información. Algunas de las aplicaciones clave se encuentran en la contratación, las admisiones escolares y los préstamos.
+- *Daños a la calidad del servicio.* La calidad del servicio se refiere a si un sistema funciona tan bien para una persona como para otra, incluso si no se brindan o retienen oportunidades, recursos o información.
 
-- _Allocation harms._ These harms can occur when AI systems extend or withhold opportunities, resources, or information. Some of the key applications are in hiring, school admissions, and lending.
+Seguimos el enfoque conocido como equidad grupal, que pregunta: ¿Qué grupos de personas corren el riesgo de sufrir daños? Los grupos relevantes deben ser especificados por el científico de datos y son específicos de la aplicación.
 
-- _Quality-of-service harms._ Quality of service refers to whether a system works as well for one person as it does for another, even if no opportunities, resources, or information are extended or withheld.
+La equidad grupal se formaliza mediante un conjunto de restricciones, que requieren que algunos aspectos (o aspectos) del comportamiento del sistema de IA sean comparables entre los grupos. El paquete Fairlearn permite la evaluación y mitigación de la injusticia bajo varias definiciones comunes. Para obtener más información sobre nuestras definiciones de equidad, visite nuestra guía del usuario sobre Equidad de los sistemas de inteligencia artificial.
 
-We follow the approach known as **group fairness**, which asks: _Which groups of individuals are at risk for experiencing harms?_ The relevant groups need to be specified by the data scientist and are application specific.
+> Nota: La equidad es fundamentalmente un desafío sociotécnico. Muchos aspectos de la equidad, como la justicia y el debido proceso, no son capturados por métricas cuantitativas de equidad. Además, hay muchas métricas de equidad cuantitativa que no pueden satisfacerse todas simultáneamente. Nuestro objetivo es permitir que los humanos evalúen diferentes estrategias de mitigación y luego hagan concesiones apropiadas a su escenario.
 
-Group fairness is formalized by a set of constraints, which require that some aspect (or aspects) of the AI system's behavior be comparable across the groups. The Fairlearn package enables assessment and mitigation of unfairness under several common definitions.
-To learn more about our definitions of fairness, please visit our
-[user guide on Fairness of AI Systems](https://fairlearn.org/main/user_guide/fairness_in_machine_learning.html#fairness-of-ai-systems).
+** Descripción general de Fairlearn
 
->_Note_:
-> Fairness is fundamentally a sociotechnical challenge. Many aspects of fairness, such as justice and due process, are not captured by quantitative fairness metrics. Furthermore, there are many quantitative fairness metrics which cannot all be satisfied simultaneously. Our goal is to enable humans to assess different mitigation strategies and then make trade-offs appropriate to their scenario.
+El paquete Fairlearn Python tiene dos componentes:
 
-## Overview of Fairlearn
+- *Métricas* para evaluar qué grupos se ven afectados negativamente por un modelo y para comparar varios modelos en términos de diversas métricas de equidad y precisión.
+- *Algoritmos* para mitigar la injusticia en una variedad de tareas de IA y en una variedad de definiciones de equidad.
 
-The Fairlearn Python package has two components:
+### Métricas de Fairlearn
 
-- _Metrics_ for assessing which groups are negatively impacted by a model, and for comparing multiple models in terms of various fairness and accuracy metrics.
+Consulte nuestra guía detallada sobre las métricas de Fairlearn.
 
-- _Algorithms_ for mitigating unfairness in a variety of AI tasks and along a variety of fairness definitions.
+### Algoritmos Fairlearn
 
-### Fairlearn metrics
+Para obtener una descripción general de nuestros algoritmos, consulte nuestro sitio web.
 
-Check out our in-depth
-[guide on the Fairlearn metrics](https://fairlearn.org/main/user_guide/assessment.html).
+## Instalar Fairlearn
 
-### Fairlearn algorithms
+Para obtener instrucciones sobre cómo instalar Fairlearn, consulte nuestra guía de inicio rápido.
 
-For an overview of our algorithms please refer to our [website](https://fairlearn.org/main/user_guide/mitigation.html).
+## Uso
 
-## Install Fairlearn
+Para el uso común, consulte los Jupyter notebooks y nuestra guía del usuario. Tome en cuenta que nuestras API están sujetas a cambios, por lo que los portátiles descargados de main pueden no ser compatibles con Fairlearn instalado con pip. En este caso, navegue por las etiquetas en el repositorio (por ejemplo, v0.7.0) para ubicar la versión apropiada del portátil.
 
-For instructions on how to install Fairlearn check out our [Quickstart guide](https://fairlearn.org/main/quickstart.html).
+## Contribuir a Fairlearn
 
-## Usage
+Para contribuir, consulte nuestra guía para colaboradores.
 
-For common usage refer to the [Jupyter notebooks](./notebooks) and our
-[user guide](https://fairlearn.org/main/user_guide/index.html).
-Please note that our APIs are subject to change, so notebooks downloaded
-from `main` may not be compatible with Fairlearn installed with `pip`.
-In this case, please navigate the tags in the repository
-(e.g. [v0.4.5](https://github.com/fairlearn/fairlearn/tree/v0.4.5))
-to locate the appropriate version of the notebook.
+## Mantenedores de Fairlearn
 
-## Contributing
+En nuestro sitio web encontrará una lista de los mantenedores actuales.
 
-To contribute please check our
-[contributor guide](https://fairlearn.org/main/contributor_guide/index.html).
+## Issues en GitHub
 
-## Maintainers
+### Preguntas de uso
 
-The Fairlearn project is maintained by:
+Haga preguntas y ayude a responderlas en Stack Overflow con la etiqueta fairlearn o en nuestro servidor de Discord.
 
-- **@adrinjalali**
-- **@hildeweerts**
-- **@MiroDudik**
-- **@mmadaio**
-- **@riedgar-ms**
-- **@romanlutz**
+### Problemas habituales (no relacionados con la seguridad)
 
-For a full list of contributors refer to the [authors page](./AUTHORS.md)
+Las "issues" están dedicadas para bugs (errores de código), solicitudes de funciones y mejoras en la documentación. Por favor envíe una propuesta a través de GitHub. Un mantenedor responderá con prontitud según corresponda.
 
-## Issues
+Los encargados del mantenimiento intentarán vincular los problemas duplicados cuando sea posible.
 
-### Usage Questions
+## Informar problemas de seguridad
 
-Pose questions and help answer them on [Stack
-Overflow](https://stackoverflow.com/questions/tagged/fairlearn) with the tag
-`fairlearn` or on [Gitter](https://gitter.im/fairlearn/community#).
-
-### Regular (non-security) issues
-
-Issues are meant for bugs, feature requests, and documentation improvements.
-Please submit a report through
-[GitHub issues](https://github.com/fairlearn/fairlearn/issues). A maintainer
-will respond promptly as appropriate.
-
-Maintainers will try to link duplicate issues when possible.
-
-### Reporting security issues
-
-To report security issues please send an email to
-`fairlearn-internal@python.org`.
+Para informar problemas de seguridad, envíe un correo electrónico a `fairlearn-internal@python.org`.
